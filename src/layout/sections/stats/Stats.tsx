@@ -16,5 +16,5 @@ export const Stats = () => {
 }
 
 const StyledStats = styled.div`
-  background-color: red;
+  background-color: #ac5959;
 `

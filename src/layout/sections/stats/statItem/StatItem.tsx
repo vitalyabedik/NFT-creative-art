@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 
+import { FlexContainer } from '@/components'
+
 type PropsType = {
   statistics: number
   description: string
@@ -8,11 +10,12 @@ type PropsType = {
 export const StatItem = ({ statistics, description }: PropsType) => {
   return (
     <StyledStatItem>
-      <Statistic>
-        {statistics}
-        <span>K</span>
-      </Statistic>
-      <Description>{description}</Description>
+      <FlexContainer direction="column" gap="8px">
+        <Statistic>
+          <span>{statistics}</span>K
+        </Statistic>
+        <Description>{description}</Description>
+      </FlexContainer>
     </StyledStatItem>
   )
 }

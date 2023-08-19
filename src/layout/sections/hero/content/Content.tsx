@@ -8,16 +8,18 @@ export const Content = () => {
     <StyledContent>
       <FlexContainer gap="72px">
         <MainContent>
-          <HeroTitle>Discover and Collect The Best NFTs Digital Art.</HeroTitle>
+          <HeroTitle>
+            Discover and Collect The Best NFTs <span>Digital Art.</span>
+          </HeroTitle>
           <HeroDescription>
             Get started with the easiest and most secure platform to buy and trade digital ART and
             NFT’s. Start exploring the world of digital art and NFTs today and take control of your
             digital assets with confidence!
           </HeroDescription>
-          <LinksContainer>
+          <FlexContainer gap="36px">
             <Link />
             <Link />
-          </LinksContainer>
+          </FlexContainer>
         </MainContent>
         <Stats />
       </FlexContainer>
@@ -40,8 +42,4 @@ const HeroTitle = styled.h1`
 const HeroDescription = styled.p`
   background-color: gray;
   padding: 20px 0 40px;
-`
-
-const LinksContainer = styled.div`
-  background-color: gray;
 `
