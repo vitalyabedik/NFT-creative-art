@@ -1,0 +1,20 @@
+import styled from 'styled-components'
+
+import { FlexContainer, SectionHeader } from '@/components'
+import { AmazingCards } from '@layout/sections/amazing/amazingCards'
+
+export const Amazing = () => {
+  return (
+    <StyledAmazing className="container">
+      <FlexContainer direction="column" gap="64px">
+        <SectionHeader title={'Amazing and Super Unique Art of This Week'} />
+        <AmazingCards />
+      </FlexContainer>
+    </StyledAmazing>
+  )
+}
+
+const StyledAmazing = styled.div`
+  background-color: #b239b2;
+  padding: 92px 0;
+`
