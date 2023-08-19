@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 import { FlexContainer, Link } from '@/components'
-import { Stats } from '@layout/sections/stats'
+import { Stats } from '@layout/sections/hero/content/stats'
 
 export const Content = () => {
   return (

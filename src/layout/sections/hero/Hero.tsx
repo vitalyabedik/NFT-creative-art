@@ -18,4 +18,5 @@ export const Hero = () => {
 const StyledHero = styled.section`
   background-color: #d28bd2;
   padding: 92px 0;
+  z-index: 10;
 `

@@ -14,14 +14,13 @@ export const BestHero = () => {
 }
 
 const StyledBestHero = styled.div`
-  background-color: aqua;
   margin: 0 51px 93px 60px;
   position: relative;
 `
 
 const Photo = styled.img`
-  height: 544px;
+  height: 548px;
   width: 464px;
   background-color: gray;
-  border: 24px;
+  border-radius: 24px;
 `
