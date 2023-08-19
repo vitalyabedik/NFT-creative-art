@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { Button, FlexContainer } from '@/components'
+import { Button, CardStatus, FlexContainer } from '@/components'
 
 export const Promotion = () => {
   return (
@@ -8,14 +8,8 @@ export const Promotion = () => {
       <FlexContainer gap="24px">
         <PromotionInfo>
           <FlexContainer justify="space-between">
-            <PromotionTime>
-              <PromotionInfoSpan>Ends in</PromotionInfoSpan>
-              <Time>05:45:47</Time>
-            </PromotionTime>
-            <PromotionPrice>
-              <PromotionInfoSpan>Current bid</PromotionInfoSpan>
-              <Price>0.24ETH</Price>
-            </PromotionPrice>
+            <CardStatus title="Ends in" value="05:45:47" />
+            <CardStatus title="Current bid" value="0.24ETH" />
           </FlexContainer>
         </PromotionInfo>
         <PromotionButtonContainer>
@@ -44,25 +38,4 @@ const PromotionButtonContainer = styled.div`
   background-color: #4979a3;
   width: 100%;
   text-align: center;
-`
-
-const PromotionInfoSpan = styled.div`
-  background-color: #4979a3;
-  padding-bottom: 8px;
-`
-
-const PromotionTime = styled.div`
-  background-color: #4979a3;
-`
-
-const Time = styled.div`
-  background-color: #4979a3;
-`
-
-const PromotionPrice = styled.div`
-  background-color: #4979a3;
-`
-
-const Price = styled.div`
-  background-color: #4979a3;
 `
