@@ -5,6 +5,7 @@ type PropsType = Partial<{
   justify: string
   align: string
   wrap: string
+  gap: string
 }>
 
 export const FlexContainer = styled.div<PropsType>`
@@ -13,4 +14,5 @@ export const FlexContainer = styled.div<PropsType>`
   justify-content: ${({ justify }) => justify || 'flex-start'};
   align-items: ${({ align }) => align || 'stretch'};
   flex-wrap: ${({ wrap }) => wrap || 'wrap'};
+  gap: ${({ gap }) => gap || '0px'};
 `
