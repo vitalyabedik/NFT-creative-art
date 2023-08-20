@@ -1,5 +1,5 @@
 import { Header } from '@layout/header'
-import { Hero, Popular } from '@layout/sections'
+import { Hero, Popular, Subscribe } from '@layout/sections'
 import { Amazing } from '@layout/sections/amazing/Amazing'
 import { Best } from '@layout/sections/best'
 
@@ -11,6 +11,7 @@ export function App() {
       <Amazing />
       <Best />
       <Popular />
+      <Subscribe />
     </div>
   )
 }
