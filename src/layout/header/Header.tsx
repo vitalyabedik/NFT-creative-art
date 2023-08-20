@@ -7,7 +7,11 @@ export const Header = () => {
     <StyledHeader className="container">
       <FlexContainer justify="space-between" align="center">
         <Logo />
-        <Menu />
+        <Menu
+          items={['Marketplace', 'Artists', 'Community', 'Collections']}
+          direction="row"
+          gap="40px"
+        />
         <Button />
       </FlexContainer>
     </StyledHeader>

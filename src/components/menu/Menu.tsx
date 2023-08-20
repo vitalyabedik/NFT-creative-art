@@ -2,23 +2,26 @@ import styled from 'styled-components'
 
 import { FlexContainer } from '@/components'
 
-export const Menu = () => {
+type PropsType = {
+  items: string[]
+  direction?: string
+  gap?: string
+}
+
+export const Menu = ({ items, direction = 'column', gap = '8px' }: PropsType) => {
+  const menuItems = items.map(item => {
+    return (
+      <li key={item}>
+        <a href="#">{item}</a>
+      </li>
+    )
+  })
+
   return (
     <StyledMenu>
       <ul>
-        <FlexContainer gap="40px">
-          <li>
-            <a href="#">Marketplace</a>
-          </li>
-          <li>
-            <a href="#">Artists</a>
-          </li>
-          <li>
-            <a href="#">Community</a>
-          </li>
-          <li>
-            <a href="#">Collections</a>
-          </li>
+        <FlexContainer direction={direction} gap={gap}>
+          {menuItems}
         </FlexContainer>
       </ul>
     </StyledMenu>
