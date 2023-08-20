@@ -5,6 +5,7 @@ import { defineConfig } from 'vite'
 
 export default defineConfig({
   plugins: [react()],
+  base: '/NFT-creative-art/',
   build: {
     outDir: 'build',
   },
