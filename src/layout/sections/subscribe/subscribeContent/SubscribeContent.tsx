@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 import { FlexContainer, SectionContent } from '@/components'
-import { LinksGroup } from '@components/linksGroup'
+import { SubscribeForm } from '@layout/sections/subscribe/subscribeForm'
 
 export const SubscribeContent = () => {
   return (
@@ -17,7 +17,7 @@ export const SubscribeContent = () => {
             description="We have a blog related to NFT so we can share thoughts and routines on our blog which is updated weekly"
             titleLevel={2}
           />
-          <LinksGroup />
+          <SubscribeForm />
         </MainContent>
       </FlexContainer>
     </StyledBestContent>

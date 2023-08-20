@@ -9,7 +9,9 @@ export const Subscribe = () => {
     <StyledSubscribe className="container">
       <FlexContainer justify="space-between" align="center">
         <SubscribePhotos />
-        <SubscribeContent />
+        <SubscribeContainer>
+          <SubscribeContent />
+        </SubscribeContainer>
       </FlexContainer>
     </StyledSubscribe>
   )
@@ -18,4 +20,8 @@ export const Subscribe = () => {
 const StyledSubscribe = styled.section`
   background-color: #6267b3;
   padding: 92px 0;
+`
+
+const SubscribeContainer = styled.section`
+  width: 520px;
 `

@@ -9,8 +9,8 @@ type PropsType = {
 export const SectionContent = ({ title, description, titleLevel }: PropsType) => {
   return (
     <StyledSectionContent>
-      <HeroTitle as={`h${titleLevel}`}>{title}</HeroTitle>
-      <HeroDescription>{description}</HeroDescription>
+      <Title as={`h${titleLevel}`}>{title}</Title>
+      <Description>{description}</Description>
     </StyledSectionContent>
   )
 }
@@ -20,11 +20,11 @@ const StyledSectionContent = styled.div`
   text-align: left;
 `
 
-const HeroTitle = styled.div`
+const Title = styled.div`
   background-color: gray;
 `
 
-const HeroDescription = styled.p`
+const Description = styled.p`
   background-color: gray;
   padding: 20px 0 40px;
 `
