@@ -1,3 +1,4 @@
+import { Footer } from '@layout/footer'
 import { Header } from '@layout/header'
 import { Hero, Popular, Subscribe } from '@layout/sections'
 import { Amazing } from '@layout/sections/amazing/Amazing'
@@ -12,6 +13,7 @@ export function App() {
       <Best />
       <Popular />
       <Subscribe />
+      <Footer />
     </div>
   )
 }
