@@ -4,7 +4,6 @@ type PropsType = Partial<{
   width: string
   height: string
   borderRadius: string
-  showIcon: boolean
 }>
 
 export const CardPhoto = styled.div<PropsType>`

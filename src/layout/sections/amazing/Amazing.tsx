@@ -14,7 +14,7 @@ export const Amazing = () => {
   )
 }
 
-const StyledAmazing = styled.div`
+const StyledAmazing = styled.section`
   background-color: #b239b2;
   padding: 92px 0;
 `
