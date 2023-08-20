@@ -1,7 +1,7 @@
 import { Button, FlexContainer, SectionTitle } from '@/components'
 
 type PropsType = {
-  title: string
+  title: JSX.Element
   titleWidth: string
   justify?: string
   align?: string

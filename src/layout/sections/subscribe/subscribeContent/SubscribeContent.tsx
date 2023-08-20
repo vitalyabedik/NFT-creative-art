@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { FlexContainer, SectionContent } from '@/components'
 import { LinksGroup } from '@components/linksGroup'
 
-export const BestContent = () => {
+export const SubscribeContent = () => {
   return (
     <StyledBestContent>
       <FlexContainer gap="72px">
@@ -11,10 +11,10 @@ export const BestContent = () => {
           <SectionContent
             title={
               <div>
-                Create And Sell Your <span>Best NFTs</span>
+                Subscribe And <span>get our Updates</span> Every Week
               </div>
             }
-            description="Start exploring the world of digital art and NFTs today and take control of your digital assets with confidence!"
+            description="We have a blog related to NFT so we can share thoughts and routines on our blog which is updated weekly"
             titleLevel={2}
           />
           <LinksGroup />

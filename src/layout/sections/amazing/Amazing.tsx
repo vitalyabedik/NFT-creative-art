@@ -8,7 +8,11 @@ export const Amazing = () => {
     <StyledAmazing className="container">
       <FlexContainer direction="column" gap="64px">
         <SectionHeader
-          title="Amazing and Super Unique Art of This Week"
+          title={
+            <div>
+              <span>Amazing</span> and Super Unique Art of This <span>Week</span>{' '}
+            </div>
+          }
           titleWidth="426px"
           justify="space-between"
           align="flex-end"

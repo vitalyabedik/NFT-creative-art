@@ -1,11 +1,16 @@
 import styled from 'styled-components'
 
+import { FlexContainer } from '@/components'
+import { SubscribeContent } from '@layout/sections/subscribe/subscribeContent'
 import { SubscribePhotos } from '@layout/sections/subscribe/subscribePhotos'
 
 export const Subscribe = () => {
   return (
     <StyledSubscribe className="container">
-      <SubscribePhotos />
+      <FlexContainer justify="space-between" align="center">
+        <SubscribePhotos />
+        <SubscribeContent />
+      </FlexContainer>
     </StyledSubscribe>
   )
 }

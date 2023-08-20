@@ -1,19 +1,15 @@
 import styled from 'styled-components'
 
 type PropsType = {
-  title: string
-  markedTitle: string
+  title: JSX.Element
   description: string
   titleLevel: number
 }
 
-export const SectionContent = ({ title, markedTitle, description, titleLevel }: PropsType) => {
+export const SectionContent = ({ title, description, titleLevel }: PropsType) => {
   return (
     <StyledSectionContent>
-      <HeroTitle as={`h${titleLevel}`}>
-        {title}
-        <span>{markedTitle}</span>
-      </HeroTitle>
+      <HeroTitle as={`h${titleLevel}`}>{title}</HeroTitle>
       <HeroDescription>{description}</HeroDescription>
     </StyledSectionContent>
   )

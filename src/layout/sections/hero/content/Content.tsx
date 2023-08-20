@@ -10,8 +10,11 @@ export const Content = () => {
       <FlexContainer gap="72px">
         <MainContent>
           <SectionContent
-            title="Discover and Collect The Best NFTs"
-            markedTitle="Digital Art."
+            title={
+              <div>
+                Discover and Collect The Best NFTs <span>Digital Art.</span>
+              </div>
+            }
             description="Get started with the easiest and most secure platform to buy and trade digital ART and
         NFT’s. Start exploring the world of digital art and NFTs today and take control of your
         digital assets with confidence!"

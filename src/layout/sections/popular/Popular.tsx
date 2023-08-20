@@ -9,7 +9,11 @@ export const Popular = () => {
       <FlexContainer direction="column" gap="64px">
         <SectionHeaderContainer>
           <SectionHeader
-            title={'Popular Artists\n' + 'On This Week'}
+            title={
+              <div>
+                Popular <span>Artists</span> On This Week
+              </div>
+            }
             titleWidth="307px"
             align="center"
             justify="space-between"
