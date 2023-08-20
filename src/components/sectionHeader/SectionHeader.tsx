@@ -1,20 +1,17 @@
-import styled from 'styled-components'
-
-import { Button, FlexContainer } from '@/components'
+import { Button, FlexContainer, SectionTitle } from '@/components'
 
 type PropsType = {
   title: string
+  titleWidth: string
+  justify?: string
+  align?: string
 }
 
-export const SectionHeader = ({ title }: PropsType) => {
+export const SectionHeader = ({ title, titleWidth, justify, align }: PropsType) => {
   return (
-    <FlexContainer justify="space-between" align="flex-end">
-      <SectionHeaderTitle>{title}</SectionHeaderTitle>
+    <FlexContainer justify={justify} align={align}>
+      <SectionTitle titleWidth={titleWidth}>{title}</SectionTitle>
       <Button></Button>
     </FlexContainer>
   )
 }
-
-const SectionHeaderTitle = styled.h2`
-  background-color: gray;
-`
