@@ -7,7 +7,12 @@ export const Amazing = () => {
   return (
     <StyledAmazing className="container">
       <FlexContainer direction="column" gap="64px">
-        <SectionHeader title={'Amazing and Super Unique Art of This Week'} />
+        <SectionHeader
+          title="Amazing and Super Unique Art of This Week"
+          titleWidth="426px"
+          justify="space-between"
+          align="flex-end"
+        />
         <AmazingCards />
       </FlexContainer>
     </StyledAmazing>
