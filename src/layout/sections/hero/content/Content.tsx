@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 import { FlexContainer, SectionContent } from '@/components'
+import { LinksGroup } from '@components/linksGroup'
 import { Stats } from '@layout/sections/hero/content/stats'
 
 export const Content = () => {
@@ -16,6 +17,7 @@ export const Content = () => {
         digital assets with confidence!"
             titleLevel={1}
           />
+          <LinksGroup />
         </MainContent>
         <Stats />
       </FlexContainer>

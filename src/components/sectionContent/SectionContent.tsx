@@ -1,7 +1,5 @@
 import styled from 'styled-components'
 
-import { FlexContainer, Link } from '@/components'
-
 type PropsType = {
   title: string
   markedTitle: string
@@ -17,16 +15,13 @@ export const SectionContent = ({ title, markedTitle, description, titleLevel }: 
         <span>{markedTitle}</span>
       </HeroTitle>
       <HeroDescription>{description}</HeroDescription>
-      <FlexContainer gap="36px">
-        <Link />
-        <Link />
-      </FlexContainer>
     </StyledSectionContent>
   )
 }
 
 const StyledSectionContent = styled.div`
   background-color: gray;
+  text-align: left;
 `
 
 const HeroTitle = styled.div`
