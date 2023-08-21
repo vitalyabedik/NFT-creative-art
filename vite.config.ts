@@ -5,9 +5,6 @@ import { defineConfig } from 'vite'
 
 export default defineConfig({
   plugins: [react()],
-  // build: {
-  //   outDir: 'build',
-  // },
   base: '/NFT-creative-art',
   resolve: {
     alias: [
