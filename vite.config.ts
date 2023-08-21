@@ -5,9 +5,10 @@ import { defineConfig } from 'vite'
 
 export default defineConfig({
   plugins: [react()],
-  build: {
-    outDir: 'build',
-  },
+  // build: {
+  //   outDir: 'build',
+  // },
+  base: '/NFT-creative-art',
   resolve: {
     alias: [
       { find: '@', replacement: path.resolve(__dirname, 'src') },
