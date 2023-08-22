@@ -1,13 +1,25 @@
 import styled from 'styled-components'
 
+import { UserInfo } from '@/components'
+
 export const PopularImages = () => {
   return (
     <GridContainer>
-      <GridItem>1</GridItem>
-      <GridItem>2</GridItem>
-      <GridItem>3</GridItem>
-      <GridItem>4</GridItem>
-      <GridItem>5</GridItem>
+      <GridItem>
+        <UserInfo userName={'Osvaldo Percy'} />
+      </GridItem>
+      <GridItem>
+        <UserInfo userName={'Ranson Sqiure'} />
+      </GridItem>
+      <GridItem>
+        <UserInfo userName={'Sebastian waltan'} />
+      </GridItem>
+      <GridItem>
+        <UserInfo userName={'Abraham Zack'} />
+      </GridItem>
+      <GridItem>
+        <UserInfo userName={'Cristio leo'} />
+      </GridItem>
     </GridContainer>
   )
 }
@@ -24,6 +36,7 @@ const GridContainer = styled.div`
 
 const GridItem = styled.div`
   background-color: green;
+  position: relative;
 
   &:first-child {
     grid-area: 1/1/2/31;
