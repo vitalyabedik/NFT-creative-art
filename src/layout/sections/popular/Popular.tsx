@@ -26,7 +26,7 @@ export const Popular = () => {
 }
 
 const StyledPopular = styled.section`
-  background-color: #b239b2;
+  background-color: #7d3a7d;
   padding: 92px 0;
 `
 
