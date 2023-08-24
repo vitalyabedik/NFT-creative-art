@@ -12,6 +12,12 @@ export const theme = {
     btnTextContained: '#090F1D',
   },
 
+  borderRadius: {
+    main: '16px',
+    photo: '24px',
+    button: '8px',
+  },
+
   media: {
     tablet: 'screen and (max-width: 768px)',
     mobile: 'screen and (max-width: 576px)',
