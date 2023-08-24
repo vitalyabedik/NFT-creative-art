@@ -12,7 +12,7 @@ export const Header = () => {
           direction="row"
           gap="40px"
         />
-        <Button />
+        <Button type="primary">Contact</Button>
       </FlexContainer>
     </StyledHeader>
   )
