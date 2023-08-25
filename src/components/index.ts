@@ -1,4 +1,5 @@
 export * from './icon'
+export * from './container'
 export * from './flexContainer'
 export * from './menu'
 export * from './logo'

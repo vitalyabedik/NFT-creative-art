@@ -1,22 +1,24 @@
 import styled from 'styled-components'
 
-import { FlexContainer } from '@/components'
+import { Container, FlexContainer } from '@/components'
 import { Copyright } from '@layout/footer/copyright'
 import { FooterContent } from '@layout/footer/footerContent'
 import { FooterMenu } from '@layout/footer/footerMenu'
 
 export const Footer = () => {
   return (
-    <StyledFooter className="container">
-      <FlexContainer direction="column" gap="48px">
-        <FooterContentContainer>
-          <FlexContainer justify="space-between">
-            <FooterContent />
-            <FooterMenu />
-          </FlexContainer>
-        </FooterContentContainer>
-        <Copyright />
-      </FlexContainer>
+    <StyledFooter>
+      <Container>
+        <FlexContainer direction="column" gap="48px">
+          <FooterContentContainer>
+            <FlexContainer justify="space-between">
+              <FooterContent />
+              <FooterMenu />
+            </FlexContainer>
+          </FooterContentContainer>
+          <Copyright />
+        </FlexContainer>
+      </Container>
     </StyledFooter>
   )
 }
