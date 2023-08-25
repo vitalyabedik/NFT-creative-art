@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { FlexContainer, SectionContent } from '@/components'
+import { FlexContainer, SectionContent, Span } from '@/components'
 import { SubscribeForm } from '@layout/sections/subscribe/subscribeForm'
 
 export const SubscribeContent = () => {
@@ -11,7 +11,7 @@ export const SubscribeContent = () => {
           <SectionContent
             title={
               <div>
-                Subscribe And <span>get our Updates</span> Every Week
+                Subscribe And <Span>get our Updates</Span> Every Week
               </div>
             }
             description="We have a blog related to NFT so we can share thoughts and routines on our blog which is updated weekly"
@@ -25,9 +25,7 @@ export const SubscribeContent = () => {
 }
 
 const StyledBestContent = styled.div`
-  max-width: 426px;
+  max-width: 520px;
 `
 
-const MainContent = styled.div`
-  background-color: lawngreen;
-`
+const MainContent = styled.div``
