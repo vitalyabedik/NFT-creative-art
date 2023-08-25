@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
 
-import { font } from '@assets/styles/Common'
+import { font, transition } from '@assets/styles/Common'
 import { theme } from '@assets/styles/Theme'
 
 type ButtonType = 'primary' | 'outlined'
@@ -21,6 +21,7 @@ export const Button = styled.button<PropsType>`
     Fmax: 16,
     Fmin: 16,
   })}
+  ${transition()}
   border-radius: ${({ borderRadius }) => borderRadius || theme.borderRadius.button};
   padding: 12px 40px;
   cursor: pointer;
@@ -44,7 +45,7 @@ export const Button = styled.button<PropsType>`
       color: ${theme.colors.primaryBg};
 
       &:hover {
-        opacity: 0.9;
+        opacity: 0.8;
       }
     `}
 `

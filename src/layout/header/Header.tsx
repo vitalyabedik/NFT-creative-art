@@ -1,18 +1,22 @@
 import styled from 'styled-components'
 
-import { Button, FlexContainer, Logo, Menu } from '@/components'
+import { Button, FlexContainer, Logo } from '@/components'
+import { theme } from '@assets/styles/Theme'
+import { HeaderMenu } from '@layout/header/headerMenu/HeaderMenu'
+import { MobileMenu } from '@layout/header/mobileMenu'
+
+const headerItems = ['Marketplace', 'Artists', 'Community', 'Collections']
 
 export const Header = () => {
   return (
     <StyledHeader className="container">
       <FlexContainer justify="space-between" align="center">
         <Logo />
-        <Menu
-          items={['Marketplace', 'Artists', 'Community', 'Collections']}
-          direction="row"
-          gap="40px"
-        />
-        <Button type="primary">Contact</Button>
+        <HeaderMenu items={headerItems} />
+        <MobileMenu items={headerItems} />
+        <ButtonContainer>
+          <Button type="primary">Contact</Button>
+        </ButtonContainer>
       </FlexContainer>
     </StyledHeader>
   )
@@ -20,4 +24,10 @@ export const Header = () => {
 
 const StyledHeader = styled.header`
   background-color: red;
+`
+
+const ButtonContainer = styled.div`
+  @media ${theme.media.hideHeader} {
+    display: none;
+  }
 `

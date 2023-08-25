@@ -29,7 +29,11 @@ export const Menu = ({ items, direction = 'column', gap = '8px' }: PropsType) =>
   )
 }
 
-const StyledMenu = styled.nav``
+const StyledMenu = styled.nav`
+  @media ${theme.media.hideHeader} {
+    display: none;
+  }
+`
 
 const MenuItem = styled.li`
   position: relative;
