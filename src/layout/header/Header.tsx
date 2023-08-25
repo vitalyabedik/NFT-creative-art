@@ -15,7 +15,7 @@ export const Header = () => {
         <HeaderMenu items={headerItems} />
         <MobileMenu items={headerItems} />
         <ButtonContainer>
-          <Button type="primary">Contact</Button>
+          <Button bntType="primary">Contact</Button>
         </ButtonContainer>
       </FlexContainer>
     </StyledHeader>
