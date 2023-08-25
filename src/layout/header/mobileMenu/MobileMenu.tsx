@@ -1,3 +1,5 @@
+import { useState } from 'react'
+
 import styled, { css } from 'styled-components'
 
 import { theme } from '@assets/styles/Theme'
@@ -8,12 +10,18 @@ type PropsType = {
 }
 
 export const MobileMenu = ({ items }: PropsType) => {
+  const [menuIsOpen, setMenuIsOpen] = useState(false)
+
+  const onClickBurgerHandler = () => setMenuIsOpen(!menuIsOpen)
+
+  const onClickPopUpHandler = () => setMenuIsOpen(false)
+
   return (
     <StyledMobileMenu>
-      <BurgerButton isOpen={true}>
+      <BurgerButton isOpen={menuIsOpen} onClick={onClickBurgerHandler}>
         <span></span>
       </BurgerButton>
-      <MobileMenuPopup isOpen={true}>
+      <MobileMenuPopup isOpen={menuIsOpen} onClick={onClickPopUpHandler}>
         <ul>
           {items.map(item => {
             return (

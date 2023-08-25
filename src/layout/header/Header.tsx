@@ -24,6 +24,7 @@ export const Header = () => {
 
 const StyledHeader = styled.header`
   background-color: red;
+  padding: 18px 0;
 `
 
 const ButtonContainer = styled.div`

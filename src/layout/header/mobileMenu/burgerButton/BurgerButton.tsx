@@ -4,17 +4,17 @@ import { theme } from '@assets/styles/Theme'
 
 export const BurgerButton = styled.button<{ isOpen: boolean }>`
   position: fixed;
-  top: -100px;
-  right: -100px;
-  width: 200px;
-  height: 200px;
+  top: 80px;
+  right: 60px;
+  width: 24px;
+  height: 24px;
   z-index: 999999;
 
   span {
     display: block;
     width: 24px;
     height: 2px;
-
+    background-color: ${theme.colors.circleFont};
     position: absolute;
     left: 40px;
     bottom: 50px;
