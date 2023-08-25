@@ -22,7 +22,10 @@ export const AmazingCard = ({
   return (
     <StyledAmazingCard>
       <FlexContainer direction="column" gap="24px">
-        <CardPhoto backgroundImage={backgroundImage} isCard />
+        <CardPhoto
+          background={`url(${backgroundImage}), lightgray 0px -26.79px / 100% 146.516% no-repeat`}
+          isCard
+        />
         <CardDescription>
           <FlexContainer justify="space-between">
             <h3>{title}</h3>

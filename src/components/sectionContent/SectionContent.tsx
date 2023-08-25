@@ -25,6 +25,5 @@ const Title = styled.div`
 `
 
 const Description = styled.p`
-  background-color: gray;
   padding: 20px 0 40px;
 `

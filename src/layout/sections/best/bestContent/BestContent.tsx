@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { FlexContainer, SectionContent } from '@/components'
+import { FlexContainer, SectionContent, Span } from '@/components'
 import { LinksGroup } from '@components/linksGroup'
 
 export const BestContent = () => {
@@ -11,7 +11,7 @@ export const BestContent = () => {
           <SectionContent
             title={
               <div>
-                Create And Sell Your <span>Best NFTs</span>
+                Create And Sell Your <Span>Best NFTs</Span>
               </div>
             }
             description="Start exploring the world of digital art and NFTs today and take control of your digital assets with confidence!"
