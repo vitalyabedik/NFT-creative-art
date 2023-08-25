@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { Container, FlexContainer, SectionHeader } from '@/components'
+import { Container, FlexContainer, SectionHeader, Span } from '@/components'
 import { AmazingCards } from '@layout/sections/amazing/amazingCards'
 
 export const Amazing = () => {
@@ -11,7 +11,7 @@ export const Amazing = () => {
           <SectionHeader
             title={
               <div>
-                <span>Amazing</span> and Super Unique Art of This <span>Week</span>{' '}
+                <Span>Amazing</Span> and Super Unique Art of This <Span>Week</Span>{' '}
               </div>
             }
             titleWidth="506px"
