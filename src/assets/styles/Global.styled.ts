@@ -2,6 +2,8 @@ import { createGlobalStyle } from 'styled-components'
 
 import { theme } from './Theme'
 
+import { font } from '@assets/styles/Common'
+
 export const GlobalStyle = createGlobalStyle`
   *, *::before, *::after {
     margin: 0;
@@ -39,5 +41,52 @@ export const GlobalStyle = createGlobalStyle`
   
   section {
     padding: 92px 0;
+  }
+  
+  h1 {
+    ${font({
+      family: 'Canela',
+      weight: 500,
+      lineHeight: 1.2,
+      Fmax: 64,
+      Fmin: 39,
+    })}
+  }
+
+  h2 {
+    ${font({
+      family: 'Canela',
+      weight: 500,
+      lineHeight: 1.2,
+      Fmax: 48,
+      Fmin: 31,
+    })}
+  }
+
+  h3 {
+    ${font({
+      weight: 700,
+      lineHeight: 1.2,
+      Fmax: 20,
+      Fmin: 20,
+    })}
+  }
+
+  h4 {
+    ${font({
+      weight: 700,
+      lineHeight: 1.2,
+      Fmax: 24,
+      Fmin: 20,
+    })}
+  }
+
+  h5 {
+    ${font({
+      weight: 700,
+      lineHeight: 1.2,
+      Fmax: 16,
+      Fmin: 16,
+    })}
   }
 `
