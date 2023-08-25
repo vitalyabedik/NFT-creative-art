@@ -12,12 +12,14 @@ type PropsType = {
 export const BestHero = ({ hero }: PropsType) => {
   return (
     <StyledBestHero>
-      <CardPhoto
-        height="548px"
-        width="464px"
-        borderRadius="24px"
-        background={`url(${hero.backgroundImage}), lightgray 0px -11.436px / 100% 127.941%`}
-      />
+      <CardPhotoContainer>
+        <CardPhoto
+          height="548px"
+          width="464px"
+          borderRadius="24px"
+          background={`url(${hero.backgroundImage}), lightgray 0px -11.436px / 100% 127.941%`}
+        />
+      </CardPhotoContainer>
       <CircleAnimatedElement />
       <Promotion hero={hero} />
     </StyledBestHero>
@@ -25,6 +27,10 @@ export const BestHero = ({ hero }: PropsType) => {
 }
 
 const StyledBestHero = styled.div`
-  margin: 0 51px 93px 60px;
+  padding: 0 51px 93px 60px;
+  position: relative;
+`
+
+const CardPhotoContainer = styled.div`
   position: relative;
 `

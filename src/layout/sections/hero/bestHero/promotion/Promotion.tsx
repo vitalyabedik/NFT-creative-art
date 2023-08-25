@@ -1,15 +1,21 @@
 import styled from 'styled-components'
 
 import { Button, CardStatus, FlexContainer } from '@/components'
+import { theme } from '@assets/styles/Theme'
+import { HeroType } from '@layout/sections'
 
-export const Promotion = () => {
+type PropsType = {
+  hero: HeroType
+}
+
+export const Promotion = ({ hero }: PropsType) => {
   return (
     <StyledPromotion>
       <FlexContainer gap="24px">
         <PromotionInfo>
           <FlexContainer justify="space-between">
-            <CardStatus title="Ends in" value="05:45:47" />
-            <CardStatus title="Current bid" value="0.24ETH" />
+            <CardStatus title="Ends in" value={hero.endingTime} />
+            <CardStatus title="Current bid" value={`${hero.price}${hero.moneyType}`} />
           </FlexContainer>
         </PromotionInfo>
         <PromotionButtonContainer>
@@ -21,21 +27,23 @@ export const Promotion = () => {
 }
 
 const StyledPromotion = styled.div`
-  background-color: #ac5050;
   position: absolute;
   right: 0;
   bottom: 0;
   padding: 20px;
   width: 264px;
+
+  border-radius: 16px;
+  border-top: 1px solid ${theme.colors.accent};
+  background-color: ${theme.colors.secondaryBg};
+  box-shadow: 0px 9px 50px 0px rgba(23, 36, 65, 0.04);
 `
 
 const PromotionInfo = styled.div`
-  background-color: #4979a3;
   width: 100%;
 `
 
 const PromotionButtonContainer = styled.div`
-  background-color: #4979a3;
   width: 100%;
   text-align: center;
 `

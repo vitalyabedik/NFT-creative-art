@@ -6,7 +6,7 @@ import { theme } from '@assets/styles/Theme'
 
 type PropsType = {
   title: string
-  value: string
+  value: string | number
   paddingBottom?: string
   showIcon?: boolean
 }

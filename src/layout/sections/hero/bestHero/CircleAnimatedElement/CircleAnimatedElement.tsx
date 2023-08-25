@@ -1,14 +1,11 @@
 import styled from 'styled-components'
 
-export const CircleAnimatedElement = () => {
-  return <StyledCircleAnimatedElement></StyledCircleAnimatedElement>
-}
-
-const StyledCircleAnimatedElement = styled.div`
+export const CircleAnimatedElement = styled.div`
   width: 174px;
   height: 174px;
   background-color: lawngreen;
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 0;
+  left: 0;
+  transform: translateY(100%);
 `
