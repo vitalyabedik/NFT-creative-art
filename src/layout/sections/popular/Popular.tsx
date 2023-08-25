@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { Container, FlexContainer, SectionHeader } from '@/components'
+import { Container, FlexContainer, SectionHeader, Span } from '@/components'
 import { PopularImages } from '@layout/sections/popular/popularImages'
 
 export const Popular = () => {
@@ -12,7 +12,7 @@ export const Popular = () => {
             <SectionHeader
               title={
                 <div>
-                  Popular <span>Artists</span> On This Week
+                  Popular <Span>Artists</Span> On This Week
                 </div>
               }
               titleWidth="307px"

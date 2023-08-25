@@ -1,25 +1,65 @@
 import styled from 'styled-components'
 
 import { UserInfo } from '@/components'
+import leoAvatar from '@assets/images/avatars/avatar-leo.webp'
+import percyAvatar from '@assets/images/avatars/avatar-percy.webp'
+import sqiureAvatar from '@assets/images/avatars/avatar-sqiure.webp'
+import waltanAvatar from '@assets/images/avatars/avatar-waltan.webp'
+import zackAvatar from '@assets/images/avatars/avatar-zack.webp'
+
+const usersData = [
+  {
+    id: 1,
+    userName: 'Osvaldo Percy',
+    photo: percyAvatar,
+  },
+  {
+    id: 2,
+    userName: 'Ranson Sqiure',
+    photo: sqiureAvatar,
+  },
+  {
+    id: 3,
+    userName: 'Sebastian waltan',
+    photo: waltanAvatar,
+  },
+  {
+    id: 4,
+    userName: 'Abraham Zack',
+    photo: zackAvatar,
+  },
+  {
+    id: 5,
+    userName: 'Cristio leo',
+    photo: leoAvatar,
+  },
+]
 
 export const PopularImages = () => {
   return (
     <GridContainer>
-      <GridItem>
-        <UserInfo userName={'Osvaldo Percy'} />
-      </GridItem>
-      <GridItem>
-        <UserInfo userName={'Ranson Sqiure'} />
-      </GridItem>
-      <GridItem>
-        <UserInfo userName={'Sebastian waltan'} />
-      </GridItem>
-      <GridItem>
-        <UserInfo userName={'Abraham Zack'} />
-      </GridItem>
-      <GridItem>
-        <UserInfo userName={'Cristio leo'} />
-      </GridItem>
+      {usersData.map(user => {
+        return (
+          <GridItem key={user.id}>
+            <UserInfo {...user} />
+          </GridItem>
+        )
+      })}
+      {/*<GridItem>*/}
+      {/*  <UserInfo userName={'Osvaldo Percy'} />*/}
+      {/*</GridItem>*/}
+      {/*<GridItem>*/}
+      {/*  <UserInfo userName={'Ranson Sqiure'} />*/}
+      {/*</GridItem>*/}
+      {/*<GridItem>*/}
+      {/*  <UserInfo userName={'Sebastian waltan'} />*/}
+      {/*</GridItem>*/}
+      {/*<GridItem>*/}
+      {/*  <UserInfo userName={'Abraham Zack'} />*/}
+      {/*</GridItem>*/}
+      {/*<GridItem>*/}
+      {/*  <UserInfo userName={'Cristio leo'} />*/}
+      {/*</GridItem>*/}
     </GridContainer>
   )
 }
