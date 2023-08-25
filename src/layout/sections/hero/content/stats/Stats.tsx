@@ -1,15 +1,20 @@
 import styled from 'styled-components'
 
 import { FlexContainer } from '@/components'
+import { HeroType } from '@layout/sections'
 import { StatItem } from '@layout/sections/hero/content/stats/statItem'
 
-export const Stats = () => {
+type PropsType = {
+  hero: HeroType
+}
+
+export const Stats = ({ hero }: PropsType) => {
   return (
     <StyledStats>
       <FlexContainer gap="94px">
-        <StatItem statistics={8.9} description="Art work" />
-        <StatItem statistics={65} description="Artist" />
-        <StatItem statistics={87} description="Collection" />
+        {hero.stats.map(stat => {
+          return <StatItem key={stat.id} statistics={stat.value} description={stat.type} />
+        })}
       </FlexContainer>
     </StyledStats>
   )

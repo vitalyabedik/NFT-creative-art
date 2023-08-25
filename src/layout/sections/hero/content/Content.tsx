@@ -2,9 +2,14 @@ import styled from 'styled-components'
 
 import { FlexContainer, SectionContent } from '@/components'
 import { LinksGroup } from '@components/linksGroup'
+import { HeroType } from '@layout/sections'
 import { Stats } from '@layout/sections/hero/content/stats'
 
-export const Content = () => {
+type PropsType = {
+  hero: HeroType
+}
+
+export const Content = ({ hero }: PropsType) => {
   return (
     <StyledContent>
       <FlexContainer gap="72px">
@@ -22,7 +27,7 @@ export const Content = () => {
           />
           <LinksGroup />
         </MainContent>
-        <Stats />
+        <Stats hero={hero} />
       </FlexContainer>
     </StyledContent>
   )
