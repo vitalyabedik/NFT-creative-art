@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 
-import { FlexContainer } from '@/components'
 import chargeImage from '@assets/images/amazing/amazing-charge-2.webp'
 import cyberpunkImage from '@assets/images/amazing/amazing-cyberpunk-1.webp'
 import surgeonImage from '@assets/images/amazing/amazing-surgeon-3.webp'
@@ -36,13 +35,19 @@ const cardsData = [
 export const AmazingCards = () => {
   return (
     <StyledAmazingCards>
-      <FlexContainer justify="space-between">
-        {cardsData.map(card => {
-          return <AmazingCard key={card.id} {...card} />
-        })}
-      </FlexContainer>
+      {cardsData.map(card => {
+        return <AmazingCard key={card.id} {...card} />
+      })}
     </StyledAmazingCards>
   )
 }
 
-const StyledAmazingCards = styled.div``
+const StyledAmazingCards = styled.div`
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+
+  width: 100%;
+  flex-wrap: wrap;
+  flex-grow: 1;
+`
