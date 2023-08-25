@@ -14,3 +14,7 @@ export const font = ({ family, weight, color, lineHeight, Fmax, Fmin }: FontProp
     line-height: ${lineHeight || 1.6};
     font-size: calc((100vw - 375px) / (1512 - 375) * (${Fmax} - ${Fmin}) + ${Fmin}px);
 `
+
+export const transition = () => `
+    transition: all 0.3s ease-out;
+`
