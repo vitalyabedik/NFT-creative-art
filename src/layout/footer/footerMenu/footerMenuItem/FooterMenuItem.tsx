@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { FlexContainer, Menu } from '@/components'
+import { Menu } from '@/components'
 
 type PropsType = {
   title: string
@@ -12,18 +12,15 @@ type PropsType = {
 export const FooterMenuItem = ({ title, items, direction, gap }: PropsType) => {
   return (
     <StyledFooterMenuItem>
-      <FlexContainer direction="column" gap="24px">
-        <FooterMenuTitle>{title}</FooterMenuTitle>
-        <Menu items={items} direction={direction} gap={gap} />
-      </FlexContainer>
+      <h3>{title}</h3>
+      <Menu items={items} direction={direction} gap={gap} />
     </StyledFooterMenuItem>
   )
 }
 
 const StyledFooterMenuItem = styled.div`
   background-color: coral;
-`
-
-const FooterMenuTitle = styled.h3`
-  background-color: gray;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 `

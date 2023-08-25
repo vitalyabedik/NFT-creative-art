@@ -28,7 +28,7 @@ const StyledFooter = styled.footer`
   padding: 92px 0;
 `
 
-const FooterContentContainer = styled.footer`
+const FooterContentContainer = styled.div`
   padding: 0 18.5px 48px 18.5px;
   border-bottom: 1px solid var(--white-dissable, #838382);
 `
