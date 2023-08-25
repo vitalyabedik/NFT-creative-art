@@ -1,10 +1,16 @@
 import styled from 'styled-components'
 
+import { Button } from '@/components'
+
 export const SubscribeForm = () => {
   return (
     <StyledForm>
       <TextInput placeholder="Enter text" />
-      <SubmitButton value="Submit" />
+      <ButtonContainer>
+        <Button bntType="primary" type="submit">
+          Place A Bid
+        </Button>
+      </ButtonContainer>
     </StyledForm>
   )
 }
@@ -15,9 +21,16 @@ const StyledForm = styled.form`
 
 const TextInput = styled.input.attrs({ type: 'text' })`
   width: 100%;
+  height: 44px;
 `
 
-const SubmitButton = styled.input.attrs({ type: 'submit' })`
+// const ButtonContainer = styled.input.attrs({ type: 'submit' })`
+//   position: absolute;
+//   top: 0;
+//   right: 0;
+// `
+
+const ButtonContainer = styled.div`
   position: absolute;
   top: 0;
   right: 0;

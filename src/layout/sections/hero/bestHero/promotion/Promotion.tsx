@@ -13,7 +13,7 @@ export const Promotion = () => {
           </FlexContainer>
         </PromotionInfo>
         <PromotionButtonContainer>
-          <Button></Button>
+          <Button bntType="outlined">Place A Bid</Button>
         </PromotionButtonContainer>
       </FlexContainer>
     </StyledPromotion>

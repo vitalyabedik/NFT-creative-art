@@ -10,7 +10,7 @@ type PropsType = {
   backgroundColor?: string
   borderRadius?: string
   fontSize?: string
-  type: ButtonType
+  bntType: ButtonType
 }
 
 export const Button = styled.button<PropsType>`
@@ -26,11 +26,12 @@ export const Button = styled.button<PropsType>`
   padding: 12px 40px;
   cursor: pointer;
 
-  ${({ type }) =>
-    type === 'outlined' &&
+  ${({ bntType }) =>
+    bntType === 'outlined' &&
     css<PropsType>`
       background-color: transparent;
       color: ${({ color }) => color || theme.colors.accent};
+      border: 1px solid ${theme.colors.accent};
 
       &:hover {
         background-color: ${theme.colors.accent};
@@ -38,8 +39,8 @@ export const Button = styled.button<PropsType>`
       }
     `}
 
-  ${({ type }) =>
-    type === 'primary' &&
+  ${({ bntType }) =>
+    bntType === 'primary' &&
     css<PropsType>`
       background-color: ${({ backgroundColor }) => backgroundColor || theme.colors.accent};
       color: ${theme.colors.primaryBg};
