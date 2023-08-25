@@ -14,7 +14,7 @@ export const Amazing = () => {
                 <span>Amazing</span> and Super Unique Art of This <span>Week</span>{' '}
               </div>
             }
-            titleWidth="426px"
+            titleWidth="506px"
             justify="space-between"
             align="flex-end"
           />
@@ -25,6 +25,4 @@ export const Amazing = () => {
   )
 }
 
-const StyledAmazing = styled.section`
-  background-color: #b239b2;
-`
+const StyledAmazing = styled.section``
