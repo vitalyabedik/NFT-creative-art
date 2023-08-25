@@ -42,7 +42,7 @@ export const AmazingCard = ({
         </CardDescription>
         <CardInfo>
           <FlexContainer justify="space-between">
-            <CardStatus title="Ending In" value={endingTime} paddingBottom="4px" showIcon />
+            <CardStatus title="Ending In" value={endingTime} paddingBottom="4px" showIcon={true} />
             <Button bntType="outlined">Place A Bid</Button>
           </FlexContainer>
         </CardInfo>

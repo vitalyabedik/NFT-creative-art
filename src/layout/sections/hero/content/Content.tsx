@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { FlexContainer, SectionContent } from '@/components'
+import { FlexContainer, SectionContent, Span } from '@/components'
 import { LinksGroup } from '@components/linksGroup'
 import { HeroType } from '@layout/sections'
 import { Stats } from '@layout/sections/hero/content/stats'
@@ -17,7 +17,7 @@ export const Content = ({ hero }: PropsType) => {
           <SectionContent
             title={
               <div>
-                Discover and Collect The Best NFTs <span>Digital Art.</span>
+                Discover and Collect The Best NFTs <Span>Digital Art.</Span>
               </div>
             }
             description="Get started with the easiest and most secure platform to buy and trade digital ART and
