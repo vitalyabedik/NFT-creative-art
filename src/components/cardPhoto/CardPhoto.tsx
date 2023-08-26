@@ -9,7 +9,6 @@ type PropsType = Partial<{
 }>
 
 export const CardPhoto = styled.div<PropsType>`
-  background-color: gray;
   width: ${({ width }) => width || '370px'};
   height: ${({ height }) => height || '340px'};
   border-radius: ${({ borderRadius }) => borderRadius || '16px'};
@@ -23,4 +22,5 @@ export const CardPhoto = styled.div<PropsType>`
   background: ${({ background }) => background || ''} ;
   background-size: cover;
   background-position: top;
+  background-repeat: no-repeat;
 }`

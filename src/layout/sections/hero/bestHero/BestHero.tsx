@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { CardPhoto } from '@components/cardPhoto'
+import { CardPhoto } from '@/components'
 import { HeroType } from '@layout/sections'
 import { CircleAnimatedElement } from '@layout/sections/hero/bestHero/CircleAnimatedElement'
 import { Promotion } from '@layout/sections/hero/bestHero/promotion'
@@ -19,6 +19,7 @@ export const BestHero = ({ hero }: PropsType) => {
           borderRadius="24px"
           background={`url(${hero.backgroundImage}), lightgray 0px -11.436px / 100% 127.941%`}
         />
+        {/*<Photo />*/}
       </CardPhotoContainer>
       <CircleAnimatedElement />
       <Promotion hero={hero} />
@@ -34,3 +35,18 @@ const StyledBestHero = styled.div`
 const CardPhotoContainer = styled.div`
   position: relative;
 `
+
+// const Photo = styled.div`
+//   max-width: 464px;
+//   width: 100%;
+//   min-height: 548px;
+//
+//   border-radius: 16px;
+//
+//   background:
+//     url(${heroImage}),
+//     lightgray 0px -11.436px / 100% 127.941%;
+//   background-size: cover;
+//   background-position: top;
+//   background-repeat: no-repeat;
+// `
