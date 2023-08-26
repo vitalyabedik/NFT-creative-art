@@ -1,9 +1,14 @@
 import styled from 'styled-components'
 
-export const Link = () => {
-  return <StyledLink href="#">Ссылка</StyledLink>
-}
+import { font } from '@assets/styles/Common'
 
-const StyledLink = styled.a`
-  background-color: gray;
+export const Link = styled.a`
+  ${font({
+    weight: 700,
+    lineHeight: 1.2,
+    Fmax: 16,
+    Fmin: 16,
+  })}
+  padding: 0;
+  background-color: transparent;
 `

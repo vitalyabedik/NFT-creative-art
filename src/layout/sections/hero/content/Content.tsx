@@ -37,6 +37,4 @@ const StyledContent = styled.div`
   max-width: 544px;
 `
 
-const MainContent = styled.div`
-  background-color: lawngreen;
-`
+const MainContent = styled.div``

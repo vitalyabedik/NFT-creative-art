@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components'
 import { font, transition } from '@assets/styles/Common'
 import { theme } from '@assets/styles/Theme'
 
-type ButtonType = 'primary' | 'outlined'
+type ButtonType = 'primary' | 'outlined' | 'link'
 
 type PropsType = {
   color?: string
@@ -22,6 +22,7 @@ export const Button = styled.button<PropsType>`
     Fmin: 16,
   })}
   ${transition()}
+  position: relative;
   border-radius: ${({ borderRadius }) => borderRadius || theme.borderRadius.button};
   padding: 12px 40px;
   cursor: pointer;
@@ -47,6 +48,28 @@ export const Button = styled.button<PropsType>`
 
       &:hover {
         opacity: 0.8;
+      }
+    `}
+
+  ${({ bntType }) =>
+    bntType === 'link' &&
+    css<PropsType>`
+      padding: 0;
+      background-color: transparent;
+
+      &:hover {
+        color: ${theme.colors.circleFont};
+
+        &::before {
+          content: '';
+          display: inline-block;
+          height: 1px;
+          width: 100%;
+          background-color: ${theme.colors.accent};
+
+          position: absolute;
+          bottom: 0;
+        }
       }
     `}
 `
