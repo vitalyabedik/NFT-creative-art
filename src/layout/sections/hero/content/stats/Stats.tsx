@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 
 import { FlexContainer } from '@/components'
-import { HeroType } from '@layout/sections'
 import { StatItem } from '@layout/sections/hero/content/stats/statItem'
+import { HeroType } from '@layout/sections/hero/heroData/HeroData'
 
 type PropsType = {
   hero: HeroType
