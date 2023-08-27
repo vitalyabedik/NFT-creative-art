@@ -5,7 +5,6 @@ type PropsType = {
 }
 
 export const Avatar = styled.div<PropsType>`
-  background-color: gray;
   width: 48px;
   height: 48px;
   border-radius: 50%;

@@ -23,6 +23,8 @@ export const theme = {
     mobile: 'screen and (max-width: 576px)',
     extra: {
       hideHeader: 'screen and (max-width: 820px)',
+      popularDesktop: 'screen and (max-width: 1020px)',
+      popularTablet: 'screen and (max-width: 830px)',
       footerDesktop: 'screen and (max-width: 1050px)',
       footerTablet: 'screen and (max-width: 940px)',
     },
