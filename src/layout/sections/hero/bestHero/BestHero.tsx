@@ -31,7 +31,7 @@ const StyledBestHero = styled.div`
   position: relative;
   width: 100%;
   max-width: 575px;
-  min-height: 575px;
+  max-height: 637px;
 `
 
 const CardPhotoContainer = styled.div`

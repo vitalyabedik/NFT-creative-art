@@ -40,4 +40,6 @@ const StyledFooterContent = styled.div`
 
 const FooterMainContent = styled.div``
 
-const FooterContentText = styled.p``
+const FooterContentText = styled.p`
+  padding-top: 5px;
+`

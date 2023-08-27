@@ -1,27 +1,27 @@
 import styled from 'styled-components'
 
-import { FlexContainer } from '@/components'
+import { Link } from '@/components'
+import { theme } from '@assets/styles/Theme'
 
 export const Copyright = () => {
   return (
-    <FlexContainer justify="space-between">
-      <CopyrightText>© Copyright 2023 - Creativeart</CopyrightText>
-      <FlexContainer justify="space-between" gap="28px">
-        <CopyrightPolicy>Privacy Policy</CopyrightPolicy>
-        <CopyrightTermsConditions>Terms & Conditions</CopyrightTermsConditions>
-      </FlexContainer>
-    </FlexContainer>
+    <CopyrightFlexContainer>
+      <Link link="#">© Copyright 2023 - Creativeart</Link>
+      <CopyrightFlexContainer>
+        <Link link="#">Privacy Policy</Link>
+        <Link link="#">Terms & Conditions</Link>
+      </CopyrightFlexContainer>
+    </CopyrightFlexContainer>
   )
 }
 
-const CopyrightText = styled.div`
-  background-color: gray;
-`
+const CopyrightFlexContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  gap: 28px;
 
-const CopyrightPolicy = styled.a`
-  background-color: gray;
-`
-
-const CopyrightTermsConditions = styled.a`
-  background-color: gray;
+  @media ${theme.media.mobile} {
+    flex-direction: column;
+    gap: 16px;
+  }
 `

@@ -9,7 +9,7 @@ export const Hero = () => {
   return (
     <StyledHero>
       <Container>
-        <FlexContainer justify={'space-between'} wrap="no-wrap">
+        <FlexContainer gap="30px" justify="space-between" wrap="no-wrap">
           <Content hero={HeroData} />
           <BestHero hero={HeroData} />
         </FlexContainer>

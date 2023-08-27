@@ -19,8 +19,12 @@ export const theme = {
   },
 
   media: {
-    hideHeader: 'screen and (max-width: 820px)',
     tablet: 'screen and (max-width: 768px)',
     mobile: 'screen and (max-width: 576px)',
+    extra: {
+      hideHeader: 'screen and (max-width: 820px)',
+      footerDesktop: 'screen and (max-width: 1050px)',
+      footerTablet: 'screen and (max-width: 940px)',
+    },
   },
 }

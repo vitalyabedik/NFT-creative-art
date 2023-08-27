@@ -30,6 +30,7 @@ export const Icon = (props: PropsType) => {
 }
 
 const StyledIcon = styled.div`
+  display: flex;
   ${transition()}
 
   & svg {

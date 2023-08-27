@@ -19,7 +19,6 @@ export const FooterMenuItem = ({ title, items, direction, gap }: PropsType) => {
 }
 
 const StyledFooterMenuItem = styled.div`
-  background-color: coral;
   display: flex;
   flex-direction: column;
   gap: 24px;

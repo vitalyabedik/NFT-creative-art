@@ -39,7 +39,7 @@ export const MobileMenu = ({ items }: PropsType) => {
 const StyledMobileMenu = styled.nav`
   display: none;
 
-  @media ${theme.media.hideHeader} {
+  @media ${theme.media.extra.hideHeader} {
     display: block;
   }
 `

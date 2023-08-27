@@ -47,7 +47,16 @@ const StyledAmazingCards = styled.div`
   justify-content: space-between;
   gap: 30px;
 
+  flex-basis: 343px;
+
   width: 100%;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   flex-grow: 1;
+
+  @media screen and (max-width: 1120px) {
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-grow: 1;
+    width: 100%;
+  }
 `

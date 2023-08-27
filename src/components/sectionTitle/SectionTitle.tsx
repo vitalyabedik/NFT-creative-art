@@ -5,6 +5,6 @@ type PropsType = {
 }
 
 export const SectionTitle = styled.h2<PropsType>`
-  width: ${({ titleWidth }) => titleWidth || ''};
+  max-width: ${({ titleWidth }) => titleWidth || ''};
   text-align: left;
 `

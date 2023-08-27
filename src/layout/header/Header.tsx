@@ -29,7 +29,7 @@ const StyledHeader = styled.header`
 `
 
 const ButtonContainer = styled.div`
-  @media ${theme.media.hideHeader} {
+  @media ${theme.media.extra.hideHeader} {
     display: none;
   }
 `

@@ -9,7 +9,7 @@ export const CircleAnimatedElement = () => {
   return (
     <StyledCircleAnimatedElement>
       <IconContainer>
-        <Icon iconId="star" width="35px" height="35px" viewBox="0 0 35px 35px" />
+        <Icon iconId="star" width="35px" height="35px" viewBox="0 0 35 35" />
       </IconContainer>
       <CurvedTextContainer>
         <ReactCurvedText

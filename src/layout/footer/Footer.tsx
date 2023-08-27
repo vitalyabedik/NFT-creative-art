@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 import { Container, FlexContainer } from '@/components'
+import { theme } from '@assets/styles/Theme'
 import { Copyright } from '@layout/footer/copyright'
 import { FooterContent } from '@layout/footer/footerContent'
 import { FooterData } from '@layout/footer/footerData'
@@ -12,10 +13,10 @@ export const Footer = () => {
       <Container>
         <FlexContainer direction="column" gap="48px">
           <FooterContentContainer>
-            <FlexContainer justify="space-between">
+            <FooterFlexContainer>
               <FooterContent socials={FooterData.socials} text={FooterData.text} />
               <FooterMenu menu={FooterData.menu} />
-            </FlexContainer>
+            </FooterFlexContainer>
           </FooterContentContainer>
           <Copyright />
         </FlexContainer>
@@ -25,11 +26,20 @@ export const Footer = () => {
 }
 
 const StyledFooter = styled.footer`
-  background-color: darkolivegreen;
   padding: 92px 16px;
 `
 
 const FooterContentContainer = styled.div`
   padding: 0 18.5px 48px 18.5px;
-  border-bottom: 1px solid var(--white-dissable, #838382);
+  border-bottom: 1px solid ${theme.colors.disabled};
+`
+
+const FooterFlexContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  gap: 48px;
+
+  @media ${theme.media.mobile} {
+    flex-direction: column;
+  }
 `

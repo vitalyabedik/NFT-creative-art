@@ -29,7 +29,7 @@ const StyledHeaderMenu = styled.nav`
     gap: 30px;
   }
 
-  @media ${theme.media.hideHeader} {
+  @media ${theme.media.extra.hideHeader} {
     display: none;
   }
 `

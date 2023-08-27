@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 import { Button, CardStatus, FlexContainer } from '@/components'
 import { theme } from '@assets/styles/Theme'
-import { HeroType } from '@layout/sections'
+import { HeroType } from '@layout/sections/hero/heroData/HeroData'
 
 type PropsType = {
   hero: HeroType
@@ -31,7 +31,8 @@ const StyledPromotion = styled.div`
   right: 0;
   bottom: 0;
   padding: 20px;
-  width: 264px;
+  max-width: 264px;
+  width: 100%;
 
   border-radius: 16px;
   border-top: 1px solid ${theme.colors.accent};
