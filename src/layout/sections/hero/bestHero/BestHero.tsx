@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 
 import { CardPhoto } from '@/components'
-import { HeroType } from '@layout/sections'
 import { CircleAnimatedElement } from '@layout/sections/hero/bestHero/CircleAnimatedElement'
 import { Promotion } from '@layout/sections/hero/bestHero/promotion'
+import { HeroType } from '@layout/sections/hero/heroData/HeroData'
 
 type PropsType = {
   hero: HeroType
