@@ -25,7 +25,7 @@ export const Header = () => {
 }
 
 const StyledHeader = styled.header`
-  padding: 18px 0;
+  padding: 18px 16px;
 `
 
 const ButtonContainer = styled.div`

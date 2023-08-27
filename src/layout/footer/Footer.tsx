@@ -26,7 +26,7 @@ export const Footer = () => {
 
 const StyledFooter = styled.footer`
   background-color: darkolivegreen;
-  padding: 92px 0;
+  padding: 92px 16px;
 `
 
 const FooterContentContainer = styled.div`
