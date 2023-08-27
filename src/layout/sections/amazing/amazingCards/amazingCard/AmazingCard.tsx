@@ -52,8 +52,12 @@ export const AmazingCard = ({
 }
 
 const StyledAmazingCard = styled.div`
-  background-color: ${theme.colors.secondaryBg};
+  width: 100%;
+  max-width: 410px;
+  min-height: 498px;
   padding: 20px;
+
+  background-color: ${theme.colors.secondaryBg};
   border-radius: 28px;
   border-top: 1px solid ${theme.colors.accent};
 `

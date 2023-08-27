@@ -35,7 +35,7 @@ export const Hero = () => {
   return (
     <StyledHero>
       <Container>
-        <FlexContainer justify={'space-between'}>
+        <FlexContainer justify={'space-between'} wrap="no-wrap">
           <Content hero={heroData} />
           <BestHero hero={heroData} />
         </FlexContainer>

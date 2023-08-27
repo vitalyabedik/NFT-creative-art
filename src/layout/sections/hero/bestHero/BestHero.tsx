@@ -19,7 +19,6 @@ export const BestHero = ({ hero }: PropsType) => {
           borderRadius="24px"
           background={`url(${hero.backgroundImage}), lightgray 0px -11.436px / 100% 127.941%`}
         />
-        {/*<Photo />*/}
       </CardPhotoContainer>
       <CircleAnimatedElement />
       <Promotion hero={hero} />
@@ -30,23 +29,11 @@ export const BestHero = ({ hero }: PropsType) => {
 const StyledBestHero = styled.div`
   padding: 0 51px 93px 60px;
   position: relative;
+  width: 100%;
+  max-width: 575px;
+  min-height: 575px;
 `
 
 const CardPhotoContainer = styled.div`
   position: relative;
 `
-
-// const Photo = styled.div`
-//   max-width: 464px;
-//   width: 100%;
-//   min-height: 548px;
-//
-//   border-radius: 16px;
-//
-//   background:
-//     url(${heroImage}),
-//     lightgray 0px -11.436px / 100% 127.941%;
-//   background-size: cover;
-//   background-position: top;
-//   background-repeat: no-repeat;
-// `

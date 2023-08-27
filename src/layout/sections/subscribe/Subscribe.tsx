@@ -24,5 +24,6 @@ const StyledSubscribe = styled.section`
 `
 
 const SubscribeContainer = styled.section`
-  width: 520px;
+  max-width: 520px;
+  width: 100%;
 `
