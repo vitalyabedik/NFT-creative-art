@@ -31,15 +31,12 @@ export const Icon = (props: PropsType) => {
 
 const StyledIcon = styled.div`
   ${transition()}
-  cursor: pointer;
 
   & svg {
-    color: ${theme.colors.accent};
+    color: ${theme.colors.mainFont};
   }
 
   &:hover svg {
-    fill: currentColor;
-    stroke: currentColor;
-    background-color: ${theme.colors.accent};
+    color: ${theme.colors.accent};
   }
 `

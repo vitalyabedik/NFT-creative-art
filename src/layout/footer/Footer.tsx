@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { Container, FlexContainer } from '@/components'
 import { Copyright } from '@layout/footer/copyright'
 import { FooterContent } from '@layout/footer/footerContent'
+import { FooterData } from '@layout/footer/footerData'
 import { FooterMenu } from '@layout/footer/footerMenu'
 
 export const Footer = () => {
@@ -12,8 +13,8 @@ export const Footer = () => {
         <FlexContainer direction="column" gap="48px">
           <FooterContentContainer>
             <FlexContainer justify="space-between">
-              <FooterContent />
-              <FooterMenu />
+              <FooterContent socials={FooterData.socials} text={FooterData.text} />
+              <FooterMenu menu={FooterData.menu} />
             </FlexContainer>
           </FooterContentContainer>
           <Copyright />

@@ -1,24 +1,34 @@
 import styled from 'styled-components'
 
 import { FlexContainer, Icon, Logo } from '@/components'
+import { FooterSocialType } from '@layout/footer/footerData'
 
-export const FooterContent = () => {
+type PropsType = {
+  socials: FooterSocialType[]
+  text: string
+}
+
+export const FooterContent = ({ socials, text }: PropsType) => {
   return (
     <StyledFooterContent>
       <FlexContainer direction="column" gap="24px">
         <FooterMainContent>
           <Logo />
-          <FooterContentText>
-            Discover NFTs by category, track the latest drop, and and follow the collections you
-            love. Enjoy it!
-          </FooterContentText>
+          <FooterContentText>{text}</FooterContentText>
         </FooterMainContent>
-        <FlexContainer gap="12px">
-          <Icon iconId={'facebook'} />
-          <Icon iconId={'telegram'} />
-          <Icon iconId={'twitter'} />
-          <Icon iconId={'linkedin'} />
-        </FlexContainer>
+        <ul>
+          <FlexContainer gap="12px">
+            {socials.map(social => {
+              return (
+                <li key={social.id}>
+                  <a href={social.link}>
+                    <Icon iconId={social.title} />
+                  </a>
+                </li>
+              )
+            })}
+          </FlexContainer>
+        </ul>
       </FlexContainer>
     </StyledFooterContent>
   )
