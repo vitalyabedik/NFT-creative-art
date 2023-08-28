@@ -1,4 +1,6 @@
-import styled from 'styled-components'
+import * as React from 'react'
+
+import { S } from './BestHero_Styles'
 
 import { CardPhoto } from '@/components'
 import { CircleAnimatedElement } from '@layout/sections/hero/bestHero/CircleAnimatedElement'
@@ -9,31 +11,19 @@ type PropsType = {
   hero: HeroType
 }
 
-export const BestHero = ({ hero }: PropsType) => {
+export const BestHero: React.FC<PropsType> = ({ hero }) => {
   return (
-    <StyledBestHero>
-      <CardPhotoContainer>
+    <S.StyledBestHero>
+      <S.CardPhotoContainer>
         <CardPhoto
           height="548px"
           width="464px"
           borderRadius="24px"
           background={`url(${hero.backgroundImage}), lightgray 0px -11.436px / 100% 127.941%`}
         />
-      </CardPhotoContainer>
+      </S.CardPhotoContainer>
       <CircleAnimatedElement />
       <Promotion hero={hero} />
-    </StyledBestHero>
+    </S.StyledBestHero>
   )
 }
-
-const StyledBestHero = styled.div`
-  padding: 0 51px 93px 60px;
-  position: relative;
-  width: 100%;
-  max-width: 575px;
-  max-height: 637px;
-`
-
-const CardPhotoContainer = styled.div`
-  position: relative;
-`
