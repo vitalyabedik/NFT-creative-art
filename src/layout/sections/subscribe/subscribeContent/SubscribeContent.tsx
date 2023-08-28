@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { FlexContainer, SectionContent, Span } from '@/components'
 import { SubscribeForm } from '@layout/sections/subscribe/subscribeForm'
 
-export const SubscribeContent = () => {
+export const SubscribeContent: React.FC = () => {
   return (
     <StyledBestContent>
       <FlexContainer gap="72px">

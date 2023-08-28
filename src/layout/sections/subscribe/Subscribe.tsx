@@ -1,27 +1,20 @@
-import styled from 'styled-components'
+import * as React from 'react'
+
+import { S } from './Subscribe_Styles'
 
 import { Container } from '@/components'
 import { SubscribeContent } from '@layout/sections/subscribe/subscribeContent'
 import { SubscribePhotos } from '@layout/sections/subscribe/subscribePhotos'
 
-export const Subscribe = () => {
+export const Subscribe: React.FC = () => {
   return (
     <Container>
-      <StyledSubscribe>
+      <S.StyledSubscribe>
         <SubscribePhotos />
-        <SubscribeContainer>
+        <S.SubscribeContainer>
           <SubscribeContent />
-        </SubscribeContainer>
-      </StyledSubscribe>
+        </S.SubscribeContainer>
+      </S.StyledSubscribe>
     </Container>
   )
 }
-
-const StyledSubscribe = styled.section`
-  background-color: #6267b3;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-`
-
-const SubscribeContainer = styled.section``
