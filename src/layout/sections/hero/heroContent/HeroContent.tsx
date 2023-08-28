@@ -1,19 +1,19 @@
-import styled from 'styled-components'
+import { S } from './HeroContent_Styles'
 
 import { FlexContainer, SectionContent, Span } from '@/components'
 import { LinksGroup } from '@components/linksGroup'
-import { Stats } from '@layout/sections/hero/content/stats'
+import { Stats } from '@layout/sections/hero/heroContent/stats'
 import { HeroType } from '@layout/sections/hero/heroData/HeroData'
 
 type PropsType = {
   hero: HeroType
 }
 
-export const Content = ({ hero }: PropsType) => {
+export const HeroContent: React.FC<PropsType> = ({ hero }) => {
   return (
-    <StyledContent>
+    <S.StyledContent>
       <FlexContainer gap="72px">
-        <MainContent>
+        <S.MainContent>
           <SectionContent
             title={
               <div>
@@ -26,15 +26,9 @@ export const Content = ({ hero }: PropsType) => {
             titleLevel={1}
           />
           <LinksGroup />
-        </MainContent>
+        </S.MainContent>
         <Stats hero={hero} />
       </FlexContainer>
-    </StyledContent>
+    </S.StyledContent>
   )
 }
-
-const StyledContent = styled.div`
-  max-width: 544px;
-`
-
-const MainContent = styled.div``

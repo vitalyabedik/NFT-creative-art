@@ -1,27 +1,6 @@
 import styled from 'styled-components'
 
-import { FlexContainer, Span } from '@/components'
 import { theme } from '@assets/styles/Theme'
-
-type PropsType = {
-  statistics: number
-  description: string
-}
-
-export const StatItem = ({ statistics, description }: PropsType) => {
-  return (
-    <StyledStatItem>
-      <StatItemContainer>
-        <FlexContainer direction="column" gap="8px">
-          <Statistic>
-            <Span>{statistics}</Span>K
-          </Statistic>
-          <Description>{description}</Description>
-        </FlexContainer>
-      </StatItemContainer>
-    </StyledStatItem>
-  )
-}
 
 const StyledStatItem = styled.div`
   position: relative;
@@ -49,3 +28,10 @@ const Statistic = styled.h2`
 const Description = styled.p`
   background-color: gray;
 `
+
+export const S = {
+  StyledStatItem,
+  StatItemContainer,
+  Statistic,
+  Description,
+}

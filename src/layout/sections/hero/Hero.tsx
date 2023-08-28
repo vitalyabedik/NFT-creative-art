@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 import { Container, FlexContainer } from '@/components'
 import { BestHero } from '@layout/sections/hero/bestHero'
-import { Content } from '@layout/sections/hero/content'
+import { HeroContent } from '@layout/sections/hero/heroContent'
 import { HeroData } from '@layout/sections/hero/heroData/HeroData'
 
 export const Hero = () => {
@@ -10,7 +10,7 @@ export const Hero = () => {
     <StyledHero>
       <Container>
         <FlexContainer gap="30px" justify="space-between" wrap="no-wrap">
-          <Content hero={HeroData} />
+          <HeroContent hero={HeroData} />
           <BestHero hero={HeroData} />
         </FlexContainer>
       </Container>
