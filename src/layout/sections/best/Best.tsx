@@ -4,7 +4,7 @@ import { Container, FlexContainer } from '@/components'
 import { BestContent } from '@layout/sections/best/bestContent'
 import { BestPhotos } from '@layout/sections/best/bestPhotos'
 
-export const Best = () => {
+export const Best: React.FC = () => {
   return (
     <StyledBest>
       <Container>

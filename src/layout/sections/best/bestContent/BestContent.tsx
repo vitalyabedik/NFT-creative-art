@@ -1,9 +1,11 @@
+import * as React from 'react'
+
 import styled from 'styled-components'
 
 import { FlexContainer, SectionContent, Span } from '@/components'
 import { LinksGroup } from '@components/linksGroup'
 
-export const BestContent = () => {
+export const BestContent: React.FC = () => {
   return (
     <StyledBestContent>
       <FlexContainer gap="72px">
