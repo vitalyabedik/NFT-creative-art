@@ -1,9 +1,12 @@
+import * as React from 'react'
+
 import styled from 'styled-components'
 
 import { Container, FlexContainer, SectionHeader, Span } from '@/components'
+import { PopularData } from '@layout/sections/popular/popularData/PopularData'
 import { PopularImages } from '@layout/sections/popular/popularImages'
 
-export const Popular = () => {
+export const Popular: React.FC = () => {
   return (
     <StyledPopular>
       <Container>
@@ -20,7 +23,7 @@ export const Popular = () => {
               justify="space-between"
             />
           </SectionHeaderContainer>
-          <PopularImages />
+          <PopularImages popularData={PopularData} />
         </FlexContainer>
       </Container>
     </StyledPopular>
