@@ -1,4 +1,6 @@
-import styled from 'styled-components'
+import * as React from 'react'
+
+import { S } from './FooterContent_Styles'
 
 import { FlexContainer, Icon, Logo } from '@/components'
 import { FooterSocialType } from '@layout/footer/footerData'
@@ -8,14 +10,14 @@ type PropsType = {
   text: string
 }
 
-export const FooterContent = ({ socials, text }: PropsType) => {
+export const FooterContent: React.FC<PropsType> = ({ socials, text }) => {
   return (
-    <StyledFooterContent>
+    <S.StyledFooterContent>
       <FlexContainer direction="column" gap="24px">
-        <FooterMainContent>
+        <S.FooterMainContent>
           <Logo />
-          <FooterContentText>{text}</FooterContentText>
-        </FooterMainContent>
+          <S.FooterContentText>{text}</S.FooterContentText>
+        </S.FooterMainContent>
         <ul>
           <FlexContainer gap="12px">
             {socials.map(social => {
@@ -30,16 +32,6 @@ export const FooterContent = ({ socials, text }: PropsType) => {
           </FlexContainer>
         </ul>
       </FlexContainer>
-    </StyledFooterContent>
+    </S.StyledFooterContent>
   )
 }
-
-const StyledFooterContent = styled.div`
-  width: 272px;
-`
-
-const FooterMainContent = styled.div``
-
-const FooterContentText = styled.p`
-  padding-top: 5px;
-`

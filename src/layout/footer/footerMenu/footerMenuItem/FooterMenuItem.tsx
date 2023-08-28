@@ -1,4 +1,6 @@
-import styled from 'styled-components'
+import * as React from 'react'
+
+import { S } from './FooterMenuItem_Styles'
 
 import { Menu } from '@/components'
 
@@ -9,17 +11,11 @@ type PropsType = {
   gap?: string
 }
 
-export const FooterMenuItem = ({ title, items, direction, gap }: PropsType) => {
+export const FooterMenuItem: React.FC<PropsType> = ({ title, items, direction, gap }) => {
   return (
-    <StyledFooterMenuItem>
+    <S.StyledFooterMenuItem>
       <h3>{title}</h3>
       <Menu items={items} direction={direction} gap={gap} />
-    </StyledFooterMenuItem>
+    </S.StyledFooterMenuItem>
   )
 }
-
-const StyledFooterMenuItem = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-`
