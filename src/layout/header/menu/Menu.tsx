@@ -6,33 +6,19 @@ type PropsType = {
   items: string[]
 }
 
-export const HeaderMenu = ({ items }: PropsType) => {
+export const Menu: React.FC<PropsType> = ({ items }) => {
   return (
-    <StyledHeaderMenu>
-      <ul>
-        {items.map(item => {
-          return (
-            <MenuItem key={item}>
-              <Link href="#">{item}</Link>
-            </MenuItem>
-          )
-        })}
-      </ul>
-    </StyledHeaderMenu>
+    <ul>
+      {items.map(item => {
+        return (
+          <MenuItem key={item}>
+            <Link href="#">{item}</Link>
+          </MenuItem>
+        )
+      })}
+    </ul>
   )
 }
-
-const StyledHeaderMenu = styled.nav`
-  ul {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-  }
-
-  @media ${theme.media.extra.hideHeader} {
-    display: none;
-  }
-`
 
 const MenuItem = styled.li`
   position: relative;

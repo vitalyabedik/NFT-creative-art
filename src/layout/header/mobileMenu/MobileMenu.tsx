@@ -1,15 +1,17 @@
 import { useState } from 'react'
+import * as React from 'react'
 
 import styled, { css } from 'styled-components'
 
 import { theme } from '@assets/styles/Theme'
+import { Menu } from '@layout/header/menu'
 import { BurgerButton } from '@layout/header/mobileMenu/burgerButton'
 
 type PropsType = {
   items: string[]
 }
 
-export const MobileMenu = ({ items }: PropsType) => {
+export const MobileMenu: React.FC<PropsType> = ({ items }) => {
   const [menuIsOpen, setMenuIsOpen] = useState(false)
 
   const onClickBurgerHandler = () => setMenuIsOpen(!menuIsOpen)
@@ -22,15 +24,7 @@ export const MobileMenu = ({ items }: PropsType) => {
         <span></span>
       </BurgerButton>
       <MobileMenuPopup isOpen={menuIsOpen} onClick={onClickPopUpHandler}>
-        <ul>
-          {items.map(item => {
-            return (
-              <MenuItem key={item}>
-                <Link href="#">{item}</Link>
-              </MenuItem>
-            )
-          })}
-        </ul>
+        <Menu items={items} />
       </MobileMenuPopup>
     </StyledMobileMenu>
   )
@@ -72,25 +66,4 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
       width: 100%;
     `}
 }
-`
-
-const MenuItem = styled.li`
-  position: relative;
-`
-
-const Link = styled.a`
-  &:hover {
-    color: ${theme.colors.circleFont};
-
-    &::before {
-      content: '';
-      display: inline-block;
-      height: 1px;
-      width: 100%;
-      background-color: ${theme.colors.accent};
-
-      position: absolute;
-      bottom: 0;
-    }
-  }
 `
