@@ -2,8 +2,9 @@ import styled from 'styled-components'
 
 import { Container, FlexContainer, SectionHeader, Span } from '@/components'
 import { AmazingCards } from '@layout/sections/amazing/amazingCards'
+import { AmazingData } from '@layout/sections/amazing/amazingData'
 
-export const Amazing = () => {
+export const Amazing: React.FC = () => {
   return (
     <StyledAmazing>
       <Container>
@@ -18,7 +19,7 @@ export const Amazing = () => {
             justify="space-between"
             align="flex-end"
           />
-          <AmazingCards />
+          <AmazingCards amazingData={AmazingData} />
         </FlexContainer>
       </Container>
     </StyledAmazing>

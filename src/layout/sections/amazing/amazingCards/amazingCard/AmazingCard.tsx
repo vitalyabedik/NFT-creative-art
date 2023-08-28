@@ -1,18 +1,12 @@
-import styled from 'styled-components'
+import { S } from './AmazingCard_Styles'
 
 import { Button, CardStatus, FlexContainer, Icon } from '@/components'
-import { theme } from '@assets/styles/Theme'
 import { CardPhoto } from '@components/cardPhoto'
+import { AmazingCardType } from '@layout/sections/amazing/amazingData'
 
-type PropsType = {
-  title: string
-  price: number
-  moneyType: string
-  endingTime: string
-  backgroundImage: string
-}
+type PropsType = AmazingCardType
 
-export const AmazingCard = ({
+export const AmazingCard: React.FC<PropsType> = ({
   title,
   price,
   moneyType,
@@ -20,16 +14,16 @@ export const AmazingCard = ({
   backgroundImage,
 }: PropsType) => {
   return (
-    <StyledAmazingCard>
+    <S.StyledAmazingCard>
       <FlexContainer direction="column" gap="24px">
         <CardPhoto
           background={`url(${backgroundImage}), lightgray 0px -26.79px / 100% 146.516% no-repeat`}
           isCard
         />
-        <CardDescription>
+        <S.CardDescription>
           <FlexContainer justify="space-between">
             <h3>{title}</h3>
-            <CardPrice>
+            <S.CardPrice>
               <FlexContainer align="center" gap="4px">
                 <Icon iconId="ethereum" />
                 <h5>
@@ -37,33 +31,16 @@ export const AmazingCard = ({
                   <span>{moneyType}</span>
                 </h5>
               </FlexContainer>
-            </CardPrice>
+            </S.CardPrice>
           </FlexContainer>
-        </CardDescription>
-        <CardInfo>
+        </S.CardDescription>
+        <S.CardInfo>
           <FlexContainer justify="space-between">
             <CardStatus title="Ending In" value={endingTime} paddingBottom="4px" showIcon={true} />
             <Button bntType="outlined">Place A Bid</Button>
           </FlexContainer>
-        </CardInfo>
+        </S.CardInfo>
       </FlexContainer>
-    </StyledAmazingCard>
+    </S.StyledAmazingCard>
   )
 }
-
-const StyledAmazingCard = styled.div`
-  width: 100%;
-  max-width: 410px;
-  min-height: 498px;
-  padding: 20px;
-
-  background-color: ${theme.colors.secondaryBg};
-  border-radius: 28px;
-  border-top: 1px solid ${theme.colors.accent};
-`
-
-const CardDescription = styled.div``
-
-const CardInfo = styled.div``
-
-const CardPrice = styled.div``
