@@ -1,7 +1,6 @@
-import styled from 'styled-components'
+import { S } from './Header_Styles'
 
 import { Button, Container, FlexContainer, Logo } from '@/components'
-import { theme } from '@assets/styles/Theme'
 import { HeaderMenu } from '@layout/header/headerMenu/HeaderMenu'
 import { MobileMenu } from '@layout/header/mobileMenu'
 
@@ -9,27 +8,17 @@ const headerItems = ['Marketplace', 'Artists', 'Community', 'Collections']
 
 export const Header = () => {
   return (
-    <StyledHeader>
+    <S.Header>
       <Container>
         <FlexContainer justify="space-between" align="center">
           <Logo />
           <HeaderMenu items={headerItems} />
           <MobileMenu items={headerItems} />
-          <ButtonContainer>
+          <S.ButtonContainer>
             <Button bntType="primary">Contact</Button>
-          </ButtonContainer>
+          </S.ButtonContainer>
         </FlexContainer>
       </Container>
-    </StyledHeader>
+    </S.Header>
   )
 }
-
-const StyledHeader = styled.header`
-  padding: 18px 16px;
-`
-
-const ButtonContainer = styled.div`
-  @media ${theme.media.extra.hideHeader} {
-    display: none;
-  }
-`
