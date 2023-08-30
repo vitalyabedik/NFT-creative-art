@@ -25,7 +25,7 @@ export const Button = styled.button<PropsType>`
   ${transition()}
   position: relative;
   border-radius: ${({ borderRadius }) => borderRadius || theme.borderRadius.button};
-  padding: 12px 40px;
+  padding: 16.5px 40px;
   cursor: pointer;
 
   ${({ bntType }) =>

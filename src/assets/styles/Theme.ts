@@ -25,6 +25,7 @@ export const theme = {
       hideHeader: 'screen and (max-width: 820px)',
       popularDesktop: 'screen and (max-width: 1020px)',
       popularTablet: 'screen and (max-width: 830px)',
+      subscribeFormMobile: 'screen and (min-width: 576px)',
       footerDesktop: 'screen and (max-width: 1050px)',
       footerTablet: 'screen and (max-width: 940px)',
     },

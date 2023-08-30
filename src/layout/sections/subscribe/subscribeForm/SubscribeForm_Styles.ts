@@ -4,12 +4,13 @@ import { theme } from '@assets/styles/Theme'
 
 const StyledForm = styled.form`
   position: relative;
+  width: 100%;
 `
 
 const TextInput = styled.input.attrs({ type: 'text' })`
   width: 100%;
-  height: 44px;
-  padding: 16px 24px;
+  height: 60px;
+  padding: 0 24px;
 
   background-color: ${theme.colors.secondaryBg};
   border-radius: 8px;
@@ -23,16 +24,15 @@ const TextInput = styled.input.attrs({ type: 'text' })`
   }
 `
 
-// const ButtonContainer = styled.input.attrs({ type: 'submit' })`
-//   position: absolute;
-//   top: 0;
-//   right: 0;
-// `
-
 const ButtonContainer = styled.div`
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 3px;
+  right: 4px;
+
+  @media ${'screen and (max-width: 576px)'} {
+    position: static;
+    margin-top: 20px;
+  }
 `
 
 export const S = {

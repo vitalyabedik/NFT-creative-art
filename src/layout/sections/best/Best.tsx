@@ -13,6 +13,7 @@ export const Best: React.FC = () => {
       <Container>
         <FlexContainer
           direction={isDesktop ? 'column' : 'row'}
+          justify={'space-between'}
           gap={isDesktop ? '48px' : '30px'}
           align="center"
         >

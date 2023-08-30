@@ -1,20 +1,32 @@
 import * as React from 'react'
 
-import { S } from './Subscribe_Styles'
+import styled from 'styled-components'
 
-import { Container } from '@/components'
+import { Container, FlexContainer } from '@/components'
+import { useWindowWidth } from '@/hooks'
 import { SubscribeContent } from '@layout/sections/subscribe/subscribeContent'
 import { SubscribePhotos } from '@layout/sections/subscribe/subscribePhotos'
 
 export const Subscribe: React.FC = () => {
+  const isDesktop = useWindowWidth(1240)
+
   return (
     <Container>
-      <S.StyledSubscribe>
-        <SubscribePhotos />
-        <S.SubscribeContainer>
-          <SubscribeContent />
-        </S.SubscribeContainer>
-      </S.StyledSubscribe>
+      <StyledSubscribe>
+        <FlexContainer
+          direction={isDesktop ? 'column-reverse' : 'row'}
+          justify={'space-between'}
+          gap={isDesktop ? '48px' : '30px'}
+          align="center"
+        >
+          <SubscribePhotos />
+          <SubscribeContent centeredItems={isDesktop} />
+        </FlexContainer>
+      </StyledSubscribe>
     </Container>
   )
 }
+
+const StyledSubscribe = styled.section`
+  background-color: #6267b3;
+`
