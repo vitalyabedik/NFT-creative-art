@@ -21,6 +21,7 @@ export const theme = {
   media: {
     tablet: 'screen and (max-width: 768px)',
     mobile: 'screen and (max-width: 576px)',
+    smallMobile: 'screen and (max-width: 376px)',
     extra: {
       hideHeader: 'screen and (max-width: 820px)',
       popularDesktop: 'screen and (max-width: 1020px)',
