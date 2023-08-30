@@ -1,14 +1,17 @@
-import styled from 'styled-components'
+import { S } from './Amazing_Styles'
 
-import { Container, FlexContainer, SectionHeader, Span } from '@/components'
+import { Button, Container, SectionHeader, Span } from '@/components'
+import { useWindowWidth } from '@/hooks'
 import { AmazingCards } from '@layout/sections/amazing/amazingCards'
 import { AmazingData } from '@layout/sections/amazing/amazingData'
 
 export const Amazing: React.FC = () => {
+  const isTablet = useWindowWidth(768)
+
   return (
-    <StyledAmazing>
+    <S.StyledAmazing>
       <Container>
-        <FlexContainer direction="column" gap="64px">
+        <S.AmazingContainer>
           <SectionHeader
             title={
               <div>
@@ -16,14 +19,14 @@ export const Amazing: React.FC = () => {
               </div>
             }
             titleWidth="506px"
+            isVisibleButton={isTablet}
             justify="space-between"
             align="flex-end"
           />
           <AmazingCards amazingData={AmazingData} />
-        </FlexContainer>
+          {isTablet && <Button bntType="primary">{'See all'}</Button>}
+        </S.AmazingContainer>
       </Container>
-    </StyledAmazing>
+    </S.StyledAmazing>
   )
 }
-
-const StyledAmazing = styled.section``

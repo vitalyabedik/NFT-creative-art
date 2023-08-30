@@ -14,6 +14,7 @@ type PropsType = {
 }
 
 export const Button = styled.button<PropsType>`
+  display: block;
   ${font({
     family: "'Inter', sans-serif",
     weight: 700,
