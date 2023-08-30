@@ -5,7 +5,7 @@ import { BestHero } from '@layout/sections/hero/bestHero'
 import { HeroContent } from '@layout/sections/hero/heroContent'
 import { HeroData } from '@layout/sections/hero/heroData/HeroData'
 
-export const Hero = () => {
+export const Hero: React.FC = () => {
   return (
     <StyledHero>
       <Container>
