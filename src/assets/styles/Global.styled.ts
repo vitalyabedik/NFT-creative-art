@@ -41,6 +41,10 @@ export const GlobalStyle = createGlobalStyle`
   
   section {
     padding: 92px 16px;
+
+    @media ${theme.media.tablet} {
+      padding: 40px 16px;
+    }
   }
   
   h1 {

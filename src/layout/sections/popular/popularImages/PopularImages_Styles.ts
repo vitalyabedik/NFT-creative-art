@@ -15,6 +15,10 @@ const GridContainer = styled.div`
     grid-template-columns: repeat(12, 1fr);
   }
 
+  @media ${theme.media.tablet} {
+    margin-top: 0;
+  }
+
   @media ${theme.media.mobile} {
     grid-template-rows: repeat(5, 356px);
   }
