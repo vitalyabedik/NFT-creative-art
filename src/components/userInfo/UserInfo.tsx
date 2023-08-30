@@ -10,7 +10,7 @@ type PropsType = {
   workImage: string
 }
 
-export const UserInfo = ({ userName, avatar }: PropsType) => {
+export const UserInfo: React.FC<PropsType> = ({ userName, avatar }) => {
   return (
     <StyledUserInfo>
       <FlexContainer justify="space-between" gap="12px">

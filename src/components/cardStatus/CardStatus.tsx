@@ -1,3 +1,5 @@
+import * as React from 'react'
+
 import styled, { css } from 'styled-components'
 
 import { FlexContainer, Icon } from '@/components'
@@ -11,7 +13,7 @@ type PropsType = {
   showIcon?: boolean
 }
 
-export const CardStatus = ({ title, value, showIcon, paddingBottom }: PropsType) => {
+export const CardStatus: React.FC<PropsType> = ({ title, value, showIcon, paddingBottom }) => {
   return (
     <StyledCardStatus>
       <CardStatusTitle paddingBottom={paddingBottom} showIcon={showIcon}>

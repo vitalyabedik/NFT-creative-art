@@ -11,9 +11,7 @@ type PropsType = {
   viewBox?: string
 }
 
-export const Icon = (props: PropsType) => {
-  const { iconId, width, height, viewBox } = props
-
+export const Icon: React.FC<PropsType> = ({ iconId, width, height, viewBox }) => {
   return (
     <StyledIcon>
       <svg

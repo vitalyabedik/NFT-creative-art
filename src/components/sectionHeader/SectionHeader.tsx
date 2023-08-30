@@ -9,14 +9,14 @@ type PropsType = {
   align?: string
 }
 
-export const SectionHeader = ({
+export const SectionHeader: React.FC<PropsType> = ({
   title,
   titleWidth,
   isVisibleButton = true,
   btnText = 'See All',
   justify,
   align,
-}: PropsType) => {
+}) => {
   return (
     <FlexContainer justify={justify} align={align}>
       <SectionTitle titleWidth={titleWidth}>{title}</SectionTitle>

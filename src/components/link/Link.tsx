@@ -9,7 +9,7 @@ type PropsType = {
   link?: string
 }
 
-export const Link = ({ children, link = '#' }: PropsType) => {
+export const Link: React.FC<PropsType> = ({ children, link = '#' }) => {
   return (
     <StyledLinkContainer>
       <StyledLink href={link}>{children}</StyledLink>

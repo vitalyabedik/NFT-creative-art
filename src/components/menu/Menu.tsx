@@ -8,7 +8,7 @@ type PropsType = {
   gap?: string
 }
 
-export const Menu = ({ items, direction = 'column', gap = '8px' }: PropsType) => {
+export const Menu: React.FC<PropsType> = ({ items, direction = 'column', gap = '8px' }) => {
   const menuItems = items.map(item => {
     return (
       <MenuItem key={item}>
