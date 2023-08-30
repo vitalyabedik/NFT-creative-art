@@ -4,13 +4,21 @@ type PropsType = {
   title: JSX.Element
   description: string
   titleLevel: number
+  centeredItems?: boolean
 }
 
-export const SectionContent = ({ title, description, titleLevel }: PropsType) => {
+export const SectionContent: React.FC<PropsType> = ({
+  title,
+  description,
+  titleLevel,
+  centeredItems = false,
+}) => {
   return (
     <StyledSectionContent>
-      <Title as={`h${titleLevel}`}>{title}</Title>
-      <Description>{description}</Description>
+      <Title centeredItems={centeredItems} as={`h${titleLevel}`}>
+        {title}
+      </Title>
+      <Description centeredItems={centeredItems}>{description}</Description>
     </StyledSectionContent>
   )
 }
@@ -20,10 +28,14 @@ const StyledSectionContent = styled.div`
   text-align: left;
 `
 
-const Title = styled.div`
+const Title = styled.div<{ centeredItems: boolean }>`
   background-color: gray;
+
+  text-align: ${({ centeredItems }) => (centeredItems ? 'center' : 'left')};
 `
 
-const Description = styled.p`
-  padding: 20px 0 40px;
+const Description = styled.p<{ centeredItems: boolean }>`
+  padding: ${({ centeredItems }) => (centeredItems ? '20px 0 32px' : '20px 0 40px')};
+
+  text-align: ${({ centeredItems }) => (centeredItems ? 'center' : 'left')};
 `

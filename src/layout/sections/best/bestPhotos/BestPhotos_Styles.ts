@@ -4,7 +4,7 @@ const StyledBestPhotos = styled.div`
   max-width: 740px;
   width: 100%;
   min-height: 559px;
-  background-color: lawngreen;
+  background-color: red;
   position: relative;
 `
 

@@ -6,6 +6,7 @@ type PropsType = Partial<{
   align: string
   wrap: string
   gap: string
+  fullWidth: boolean
 }>
 
 export const FlexContainer = styled.div<PropsType>`
@@ -15,4 +16,5 @@ export const FlexContainer = styled.div<PropsType>`
   align-items: ${({ align }) => align || 'stretch'};
   flex-wrap: ${({ wrap }) => wrap || 'wrap'};
   gap: ${({ gap }) => gap || '0px'};
+  width: ${({ fullWidth }) => fullWidth && '100%'};
 `
