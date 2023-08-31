@@ -3,28 +3,48 @@ import * as React from 'react'
 import { S } from './BestPhotos_Styles'
 
 import { CardPhoto } from '@/components'
+import { useWindowWidth } from '@/hooks'
 import imageBest2 from '@assets/images/best/best-1.webp'
 import imageBest1 from '@assets/images/best/best-2.webp'
+import { CardImage } from '@components/cardImage'
 
 export const BestPhotos: React.FC = () => {
+  const isMobile = useWindowWidth(375)
+
   return (
-    <S.StyledBestPhotos>
-      <S.FirstBestPhoto>
-        <CardPhoto
-          width="410px"
-          height="475px"
-          borderRadius="24px"
-          background={`url(${imageBest1}), lightgray 50%`}
-        />
-      </S.FirstBestPhoto>
-      <S.SecondaryBestPhoto>
-        <CardPhoto
-          width="410px"
-          height="400px"
-          borderRadius="24px"
-          background={`url(${imageBest2}), lightgray 0px -16.951px / 100% 125.44%`}
-        />
-      </S.SecondaryBestPhoto>
+    <S.StyledBestPhotos isMobile={isMobile}>
+      <CardPhoto
+        maxWidth={'410px'}
+        width={'55%'}
+        height={'85%'}
+        borderRadius="24px"
+        sectionValue={'best'}
+        viewValue={'positioned'}
+        positionOptions={{
+          position: 'absolute',
+          top: '0',
+          right: '0',
+          zIndex: 10,
+        }}
+      >
+        <CardImage src={imageBest1} alt="bestImage-1" />
+      </CardPhoto>
+      <CardPhoto
+        maxWidth={'410px'}
+        width={'55%'}
+        height={'71.5%'}
+        borderRadius="24px"
+        sectionValue={'best'}
+        viewValue={'positioned'}
+        positionOptions={{
+          position: 'absolute',
+          bottom: '0',
+          left: '0',
+          zIndex: 10,
+        }}
+      >
+        <CardImage src={imageBest2} alt="bestImage-2" />
+      </CardPhoto>
     </S.StyledBestPhotos>
   )
 }

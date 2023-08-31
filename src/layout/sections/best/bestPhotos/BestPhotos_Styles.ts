@@ -1,33 +1,34 @@
 import styled from 'styled-components'
 
-const StyledBestPhotos = styled.div`
+import { theme } from '@assets/styles/Theme'
+
+type PropsType = Partial<{
+  isMobile: boolean
+  isTabletSmall: boolean
+  isTabletBig: boolean
+  isDesktop: boolean
+  height: string
+}>
+
+const StyledBestPhotos = styled.div<PropsType>`
   max-width: 740px;
   width: 100%;
-  min-height: 559px;
-  background-color: red;
+  height: ${({ isMobile }) => (isMobile ? '343px' : '559px')};
   position: relative;
-`
 
-const FirstBestPhoto = styled.div`
-  position: absolute;
-  top: 0;
-  right: 0;
-  max-width: 410px;
-  width: 100%;
-  max-height: 475px;
-`
+  @media ${theme.media.mobile} {
+    height: 450px;
+  }
 
-const SecondaryBestPhoto = styled.div`
-  position: absolute;
-  bottom: 0;
-  z-index: 10;
-  max-width: 410px;
-  width: 100%;
-  max-height: 400px;
+  @media ${theme.media.mobile} {
+    height: 400px;
+  }
+
+  @media ${theme.media.smallMobile} {
+    height: 343px;
+  }
 `
 
 export const S = {
   StyledBestPhotos,
-  FirstBestPhoto,
-  SecondaryBestPhoto,
 }

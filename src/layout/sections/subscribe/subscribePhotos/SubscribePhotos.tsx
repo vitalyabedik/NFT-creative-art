@@ -14,6 +14,7 @@ export const SubscribePhotos: React.FC = () => {
           width="410px"
           height="376px"
           borderRadius="20px"
+          viewValue={'background'}
           background={`url(${subscribeImage1}), lightgray -5.732px -51.573px / 100% 136.303%`}
         />
       </S.FirstSubscribePhoto>
@@ -22,6 +23,7 @@ export const SubscribePhotos: React.FC = () => {
           width="282px"
           height="348px"
           borderRadius="16px"
+          viewValue={'background'}
           background={`url(${subscribeImage2}), lightgray 50%`}
         />
       </S.SecondarySubscribePhoto>

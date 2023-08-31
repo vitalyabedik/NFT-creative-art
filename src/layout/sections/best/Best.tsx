@@ -25,6 +25,4 @@ export const Best: React.FC = () => {
   )
 }
 
-const StyledBest = styled.section`
-  background-color: #b239b2;
-`
+const StyledBest = styled.section``

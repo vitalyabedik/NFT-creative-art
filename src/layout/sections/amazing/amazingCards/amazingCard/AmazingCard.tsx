@@ -19,6 +19,7 @@ export const AmazingCard: React.FC<PropsType> = ({
         <CardPhoto
           background={`url(${backgroundImage}), lightgray 0px -26.79px / 100% 146.516% no-repeat`}
           isCard
+          viewValue={'background'}
         />
         <S.CardDescription>
           <FlexContainer justify="space-between">

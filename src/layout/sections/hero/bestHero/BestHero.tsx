@@ -18,6 +18,7 @@ export const BestHero: React.FC<PropsType> = ({ hero }) => {
         <CardPhoto
           height="548px"
           width="464px"
+          viewValue={'background'}
           borderRadius="24px"
           background={`url(${hero.backgroundImage}), lightgray 0px -11.436px / 100% 127.941%`}
         />
