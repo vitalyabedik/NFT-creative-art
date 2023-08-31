@@ -44,6 +44,22 @@ export const CardPhoto = styled.div<PropsType>`
         }
       }
     `}
+
+  ${({ sectionValue }) =>
+    sectionValue === 'subscribe' &&
+    css<PropsType>`
+      @media ${theme.media.smallMobile} {
+        &:first-child {
+          width: 225px;
+          height: 204px;
+        }
+
+        &:last-child {
+          width: 153px;
+          height: 190px;
+        }
+      }
+    `}
   
  
     ${({ isCard }) =>

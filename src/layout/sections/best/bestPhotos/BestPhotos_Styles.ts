@@ -16,7 +16,7 @@ const StyledBestPhotos = styled.div<PropsType>`
   height: ${({ isMobile }) => (isMobile ? '343px' : '559px')};
   position: relative;
 
-  @media ${theme.media.mobile} {
+  @media ${theme.media.tablet} {
     height: 450px;
   }
 

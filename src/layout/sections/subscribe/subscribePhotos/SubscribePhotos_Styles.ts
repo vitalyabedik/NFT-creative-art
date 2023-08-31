@@ -1,39 +1,34 @@
 import styled from 'styled-components'
 
-const StyledSubscribePhotos = styled.div`
+import { theme } from '@assets/styles/Theme'
+
+type PropsType = Partial<{
+  isMobile: boolean
+  isTabletSmall: boolean
+  isTabletBig: boolean
+  isDesktop: boolean
+  height: string
+}>
+
+const StyledSubscribePhotos = styled.div<PropsType>`
   max-width: 630px;
   width: 100%;
-  min-height: 458px;
-  background-color: lawngreen;
+  height: 458px;
   position: relative;
-`
 
-const FirstSubscribePhoto = styled.div`
-  position: absolute;
-  bottom: 33px;
-  left: 30px;
-  z-index: 10;
-  transform: rotate(-11.188deg);
+  @media ${theme.media.tablet} {
+    height: 400px;
+  }
 
-  max-width: 410px;
-  width: 100%;
-  max-height: 376px;
-`
+  @media ${theme.media.mobile} {
+    height: 350px;
+  }
 
-const SecondarySubscribePhoto = styled.div`
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  z-index: 10;
-  background-color: coral;
-
-  max-width: 282px;
-  width: 100%;
-  max-height: 348px;
+  @media ${theme.media.smallMobile} {
+    height: 250px;
+  }
 `
 
 export const S = {
   StyledSubscribePhotos,
-  FirstSubscribePhoto,
-  SecondarySubscribePhoto,
 }
