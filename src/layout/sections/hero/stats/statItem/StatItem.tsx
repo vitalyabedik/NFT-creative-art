@@ -1,6 +1,5 @@
-import { S } from './StatItem_Styles'
-
 import { FlexContainer, Span } from '@/components'
+import { S } from '@layout/sections/hero/stats/statItem/StatItem_Styles'
 
 type PropsType = {
   statistics: number

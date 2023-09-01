@@ -3,8 +3,8 @@ import * as React from 'react'
 import styled from 'styled-components'
 
 import { FlexContainer } from '@/components'
-import { StatItem } from '@layout/sections/hero/heroContent/stats/statItem'
 import { HeroType } from '@layout/sections/hero/heroData/HeroData'
+import { StatItem } from '@layout/sections/hero/stats/statItem'
 
 type PropsType = {
   hero: HeroType
