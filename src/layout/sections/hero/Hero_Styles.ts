@@ -49,7 +49,7 @@ const GridItem = styled.div`
 
     @media ${theme.media.extra.heroTablet} {
       grid-area: 2/1/3/1;
-      width: 70%;
+      width: 55%;
     }
 
     @media ${theme.media.mobile} {

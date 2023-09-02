@@ -20,7 +20,6 @@ export const GlobalStyle = createGlobalStyle`
     background-color: ${theme.colors.primaryBg};
     color: ${theme.colors.mainFont};
     line-height: 1.6;
-    
     min-width: 375px;
   }
 
