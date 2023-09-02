@@ -1,9 +1,12 @@
 import { S } from './HeroContent_Styles'
 
 import { FlexContainer, SectionContent, Span } from '@/components'
+import { useWindowWidth } from '@/hooks'
 import { LinksGroup } from '@components/linksGroup'
 
 export const HeroContent: React.FC = () => {
+  const isTablet = useWindowWidth(960)
+
   return (
     <S.StyledContent>
       <FlexContainer gap="72px">
@@ -19,7 +22,7 @@ export const HeroContent: React.FC = () => {
         digital assets with confidence!"
             titleLevel={1}
           />
-          <LinksGroup centeredItems />
+          <LinksGroup centeredItems={isTablet} />
         </S.MainContent>
       </FlexContainer>
     </S.StyledContent>

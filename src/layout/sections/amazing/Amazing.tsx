@@ -24,9 +24,11 @@ export const Amazing: React.FC = () => {
             align="flex-end"
           />
           <AmazingCards amazingData={AmazingData} />
-          <FlexContainer justify="center">
-            {isTablet && <Button bntType="primary">{'See all'}</Button>}
-          </FlexContainer>
+          {isTablet && (
+            <FlexContainer justify="center">
+              <Button bntType="primary">{'See all'}</Button>
+            </FlexContainer>
+          )}
         </FlexContainer>
       </Container>
     </StyledAmazing>

@@ -37,6 +37,4 @@ export const Popular: React.FC = () => {
   )
 }
 
-const StyledPopular = styled.section`
-  background-color: green;
-`
+const StyledPopular = styled.section``
