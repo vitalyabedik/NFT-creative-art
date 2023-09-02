@@ -26,9 +26,11 @@ export const Popular: React.FC = () => {
             justify={isTablet ? 'center' : 'space-between'}
           />
           <PopularImages popularData={PopularData} />
-          <FlexContainer justify="center">
-            {isTablet && <Button bntType="primary">{'See all'}</Button>}
-          </FlexContainer>
+          {isTablet && (
+            <FlexContainer justify="center">
+              <Button bntType="primary">{'See all'}</Button>
+            </FlexContainer>
+          )}
         </FlexContainer>
       </Container>
     </StyledPopular>

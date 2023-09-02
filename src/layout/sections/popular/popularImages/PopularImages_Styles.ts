@@ -3,12 +3,10 @@ import styled from 'styled-components'
 import { theme } from '@assets/styles/Theme'
 
 const GridContainer = styled.div`
-  background-color: red;
   display: grid;
   gap: 30px;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(2, 310px);
-  margin-top: 64px;
 
   @media ${theme.media.extra.popularTablet} {
     grid-template-rows: repeat(4, 310px);
@@ -25,7 +23,6 @@ const GridContainer = styled.div`
 `
 
 const GridItem = styled.div<{ image: string }>`
-  background-color: green;
   position: relative;
   background: linear-gradient(2deg, rgba(19, 30, 58, 0.92) 0%, rgba(19, 30, 58, 0) 94.62%),
     url(${props => props.image});
