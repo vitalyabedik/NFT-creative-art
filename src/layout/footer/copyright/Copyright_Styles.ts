@@ -7,6 +7,10 @@ const CopyrightFlexContainer = styled.div`
   justify-content: space-between;
   gap: 28px;
 
+  @media ${theme.media.tablet} {
+    gap: 20px;
+  }
+
   @media ${theme.media.mobile} {
     flex-direction: column;
     gap: 16px;

@@ -27,6 +27,4 @@ export const Subscribe: React.FC = () => {
   )
 }
 
-const StyledSubscribe = styled.section`
-  background-color: #6267b3;
-`
+const StyledSubscribe = styled.section``

@@ -26,7 +26,7 @@ const TextInput = styled.input.attrs({ type: 'text' })`
 
 const ButtonContainer = styled.div`
   position: absolute;
-  top: 3px;
+  top: 5px;
   right: 4px;
 
   @media ${'screen and (max-width: 576px)'} {

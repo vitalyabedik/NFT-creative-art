@@ -26,13 +26,10 @@ export const SectionContent: React.FC<PropsType> = ({
 }
 
 const StyledSectionContent = styled.div`
-  background-color: gray;
   text-align: left;
 `
 
 const Title = styled.div<{ centeredItems: boolean }>`
-  background-color: gray;
-
   text-align: ${({ centeredItems }) => (centeredItems ? 'center' : 'left')};
 
   @media ${theme.media.extra.heroTablet} {
