@@ -9,7 +9,7 @@ type PropsType = {
 export const LinksGroup: React.FC<PropsType> = ({ centeredItems = false }) => {
   return (
     <FlexContainer
-      gap="36px"
+      gap={centeredItems ? '32px' : '36px'}
       justify={centeredItems ? 'center' : 'flex-start'}
       align="center"
       fullWidth={centeredItems}

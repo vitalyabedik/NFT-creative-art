@@ -11,6 +11,24 @@ export const CardPhoto = styled.div<PropsType>`
   border-radius: ${({ borderRadius }) => borderRadius || '16px'};
 
   ${({ sectionValue }) =>
+    sectionValue === 'hero' &&
+    css<PropsType>`
+      @media ${theme.media.extra.heroDesktop} {
+        height: 85%;
+        width: 350px;
+      }
+
+      @media ${theme.media.tablet} {
+        height: 85%;
+        width: 294px;
+      }
+
+      @media ${theme.media.smallMobile} {
+        height: 344px;
+      }
+    `}
+  
+  ${({ sectionValue }) =>
     sectionValue === 'best' &&
     css<PropsType>`
       @media ${theme.media.tablet} {
@@ -97,7 +115,7 @@ export const CardPhoto = styled.div<PropsType>`
 `
 
 // types
-type SectionValueType = 'best' | 'subscribe'
+type SectionValueType = 'hero' | 'best' | 'subscribe'
 type ViewValueType = 'card' | 'background' | 'positioned'
 
 type PositionOptionsType = Partial<{

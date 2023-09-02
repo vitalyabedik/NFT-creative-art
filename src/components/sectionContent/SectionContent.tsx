@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 
+import { theme } from '@assets/styles/Theme'
+
 type PropsType = {
   title: JSX.Element
   description: string
@@ -32,10 +34,18 @@ const Title = styled.div<{ centeredItems: boolean }>`
   background-color: gray;
 
   text-align: ${({ centeredItems }) => (centeredItems ? 'center' : 'left')};
+
+  @media ${theme.media.extra.heroTablet} {
+    text-align: center;
+  }
 `
 
 const Description = styled.p<{ centeredItems: boolean }>`
   padding: ${({ centeredItems }) => (centeredItems ? '20px 0 32px' : '20px 0 40px')};
 
   text-align: ${({ centeredItems }) => (centeredItems ? 'center' : 'left')};
+
+  @media ${theme.media.extra.heroTablet} {
+    text-align: center;
+  }
 `

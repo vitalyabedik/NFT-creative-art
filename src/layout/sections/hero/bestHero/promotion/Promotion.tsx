@@ -3,6 +3,7 @@ import * as React from 'react'
 import { S } from './Promotion_Styles'
 
 import { Button, CardStatus, FlexContainer } from '@/components'
+import { useWindowWidth } from '@/hooks'
 import { HeroType } from '@layout/sections/hero/heroData/HeroData'
 
 type PropsType = {
@@ -10,9 +11,11 @@ type PropsType = {
 }
 
 export const Promotion: React.FC<PropsType> = ({ hero }) => {
+  const isTablet = useWindowWidth(576)
+
   return (
     <S.StyledPromotion>
-      <FlexContainer gap="24px">
+      <FlexContainer gap={isTablet ? '16px' : '24px'}>
         <S.PromotionInfo>
           <FlexContainer justify="space-between">
             <CardStatus title="Ends in" value={hero.endingTime} />

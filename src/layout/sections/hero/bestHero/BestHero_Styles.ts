@@ -1,15 +1,21 @@
 import styled from 'styled-components'
 
+import { theme } from '@assets/styles/Theme'
+
 const StyledBestHero = styled.div`
-  padding: 0 51px 93px 60px;
+  background-color: blue;
   position: relative;
-  width: 100%;
-  max-width: 575px;
-  max-height: 637px;
 `
 
 const CardPhotoContainer = styled.div`
-  position: relative;
+  max-width: 575px;
+  width: 100%;
+  height: 637px;
+
+  @media ${theme.media.tablet} {
+    &:first-child {
+      height: 436px;
+    }
 `
 
 export const S = {

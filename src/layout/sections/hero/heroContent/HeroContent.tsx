@@ -2,14 +2,8 @@ import { S } from './HeroContent_Styles'
 
 import { FlexContainer, SectionContent, Span } from '@/components'
 import { LinksGroup } from '@components/linksGroup'
-import { Stats } from '@layout/sections/hero/heroContent/stats'
-import { HeroType } from '@layout/sections/hero/heroData/HeroData'
 
-type PropsType = {
-  hero: HeroType
-}
-
-export const HeroContent: React.FC<PropsType> = ({ hero }) => {
+export const HeroContent: React.FC = () => {
   return (
     <S.StyledContent>
       <FlexContainer gap="72px">
@@ -25,9 +19,8 @@ export const HeroContent: React.FC<PropsType> = ({ hero }) => {
         digital assets with confidence!"
             titleLevel={1}
           />
-          <LinksGroup />
+          <LinksGroup centeredItems />
         </S.MainContent>
-        <Stats hero={hero} />
       </FlexContainer>
     </S.StyledContent>
   )

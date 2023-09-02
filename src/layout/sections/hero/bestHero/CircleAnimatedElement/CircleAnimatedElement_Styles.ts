@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 import { font } from '@assets/styles/Common'
+import { theme } from '@assets/styles/Theme'
 
 const StyledCircleAnimatedElement = styled.div`
   width: 174px;
@@ -20,6 +21,12 @@ const StyledCircleAnimatedElement = styled.div`
       transform: translateY(100%) rotate(360deg);
     }
   }
+
+  @media ${theme.media.tablet} {
+    top: 80px;
+    width: 82px;
+    height: 82px;
+  }
 `
 
 const IconContainer = styled.div`
@@ -32,6 +39,7 @@ const IconContainer = styled.div`
 const CurvedTextContainer = styled.div`
   position: absolute;
   top: 0;
+
   ${font({
     family: 'Source Sans Pro',
   })}

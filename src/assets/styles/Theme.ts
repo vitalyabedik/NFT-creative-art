@@ -24,6 +24,9 @@ export const theme = {
     smallMobile: 'screen and (max-width: 376px)',
     extra: {
       hideHeader: 'screen and (max-width: 820px)',
+      heroBigDesktop: 'screen and (max-width: 1310px)',
+      heroDesktop: 'screen and (max-width: 1165px)',
+      heroTablet: 'screen and (max-width: 960px)',
       popularDesktop: 'screen and (max-width: 1020px)',
       popularTablet: 'screen and (max-width: 830px)',
       subscribeFormMobile: 'screen and (min-width: 576px)',

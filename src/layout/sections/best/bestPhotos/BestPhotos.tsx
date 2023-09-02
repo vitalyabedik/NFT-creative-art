@@ -2,11 +2,10 @@ import * as React from 'react'
 
 import { S } from './BestPhotos_Styles'
 
-import { CardPhoto } from '@/components'
+import { CardPhoto, CardImage } from '@/components'
 import { useWindowWidth } from '@/hooks'
 import imageBest2 from '@assets/images/best/best-1.webp'
 import imageBest1 from '@assets/images/best/best-2.webp'
-import { CardImage } from '@components/cardImage'
 
 export const BestPhotos: React.FC = () => {
   const isMobile = useWindowWidth(375)
