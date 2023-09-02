@@ -21,17 +21,7 @@ const StatItemContainer = styled.div`
   }
 `
 
-const Statistic = styled.h2`
-  background-color: gray;
-`
-
-const Description = styled.p`
-  background-color: gray;
-`
-
 export const S = {
   StyledStatItem,
   StatItemContainer,
-  Statistic,
-  Description,
 }

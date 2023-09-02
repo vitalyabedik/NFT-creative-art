@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import { theme } from '@assets/styles/Theme'
 
 const StyledBestHero = styled.div`
-  background-color: blue;
   position: relative;
 `
 

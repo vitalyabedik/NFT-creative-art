@@ -11,10 +11,10 @@ export const StatItem: React.FC<PropsType> = ({ statistics, description }) => {
     <S.StyledStatItem>
       <S.StatItemContainer>
         <FlexContainer direction="column" gap="8px">
-          <S.Statistic>
+          <h2>
             <Span>{statistics}</Span>K
-          </S.Statistic>
-          <S.Description>{description}</S.Description>
+          </h2>
+          <p>{description}</p>
         </FlexContainer>
       </S.StatItemContainer>
     </S.StyledStatItem>
