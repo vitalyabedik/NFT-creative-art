@@ -8,7 +8,7 @@ export const CardPhoto = styled.div<PropsType>`
   max-height: ${({ maxHeight }) => maxHeight || '475px'};
   width: ${({ width }) => width || '100%'};
   height: ${({ height }) => height || '340px'};
-  border-radius: ${({ borderRadius }) => borderRadius || '16px'};
+  border-radius: ${({ borderRadius }) => borderRadius || `${theme.borderRadius.main}`};
 
   ${({ sectionValue }) =>
     sectionValue === 'hero' &&

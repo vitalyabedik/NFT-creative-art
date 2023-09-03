@@ -10,7 +10,7 @@ const StyledPromotion = styled.div`
   max-width: 264px;
   width: 100%;
 
-  border-radius: 16px;
+  border-radius: ${theme.borderRadius.main};
   border-top: 1px solid ${theme.colors.accent};
   background-color: ${theme.colors.secondaryBg};
   box-shadow: 0px 9px 50px 0px rgba(23, 36, 65, 0.04);

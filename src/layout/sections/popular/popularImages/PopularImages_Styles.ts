@@ -29,7 +29,7 @@ const GridItem = styled.div<{ image: string }>`
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
-  border-radius: 16px;
+  border-radius: ${theme.borderRadius.main};
 
   @media ${theme.media.mobile} {
     background-position: center;

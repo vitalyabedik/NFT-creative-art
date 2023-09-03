@@ -13,7 +13,7 @@ const TextInput = styled.input.attrs({ type: 'text' })`
   padding: 0 24px;
 
   background-color: ${theme.colors.secondaryBg};
-  border-radius: 8px;
+  border-radius: ${theme.borderRadius.button};
 
   &:focus {
     outline: none;
