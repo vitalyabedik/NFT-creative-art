@@ -25,15 +25,19 @@ const StyledLink = styled.a`
   &:hover {
     color: ${theme.colors.circleFont};
 
+    position: relative;
+
     &::before {
       content: '';
-      display: inline-block;
+      display: block;
       height: 1px;
       width: 100%;
       background-color: ${theme.colors.accent};
 
       position: absolute;
-      bottom: 0;
+      bottom: -5px;
+      left: 50%;
+      transform: translateX(-50%);
     }
   }
 `
