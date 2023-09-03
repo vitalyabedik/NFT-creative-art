@@ -17,6 +17,7 @@ export const SubscribePhotos: React.FC = () => {
         width="65%"
         height="82%"
         borderRadius="20px"
+        sectionValue={'subscribe'}
         viewValue={'positioned'}
         positionOptions={{
           position: 'absolute',
@@ -33,6 +34,7 @@ export const SubscribePhotos: React.FC = () => {
         width="45%"
         height="76%"
         borderRadius="16px"
+        sectionValue={'subscribe'}
         viewValue={'positioned'}
         positionOptions={{
           position: 'absolute',

@@ -1,8 +1,18 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 import { theme } from '@assets/styles/Theme'
 
-const StyledHero = styled.section``
+type PropsType = {
+  isScrolled: boolean
+}
+
+const StyledHero = styled.section<PropsType>`
+  ${({ isScrolled }) =>
+    isScrolled &&
+    css<PropsType>`
+      margin-top: 100px;
+    `}
+`
 const GridContainer = styled.div`
   display: grid;
   column-gap: 171px;

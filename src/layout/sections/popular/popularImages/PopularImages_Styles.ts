@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 
+import { noHover, transition } from '@assets/styles/Common'
 import { theme } from '@assets/styles/Theme'
 
 const GridContainer = styled.div`
@@ -101,6 +102,15 @@ const GridItem = styled.div<{ image: string }>`
     @media ${theme.media.mobile} {
       grid-area: 3/1/4/13;
     }
+  }
+
+  &:hover {
+    scale: 1.05;
+    ${transition()}
+  }
+
+  &:not(:hover) {
+    ${noHover()}
   }
 `
 

@@ -29,6 +29,8 @@ const PromotionInfo = styled.div`
 const PromotionButtonContainer = styled.div`
   width: 100%;
   text-align: center;
+  display: flex;
+  justify-content: center;
 `
 
 export const S = {

@@ -19,5 +19,11 @@ export const font = ({ family, weight, color, lineHeight, Fmax, Fmin }: FontProp
 `
 
 export const transition = () => `
-    transition: .2s ease-in-out;
+    transition: all .2s ease-in-out;
+`
+
+export const noHover = () => `
+    transition: all .3s ease-in-out;
+    transition-delay: 0.1s;
+    transform: scale(1);
 `

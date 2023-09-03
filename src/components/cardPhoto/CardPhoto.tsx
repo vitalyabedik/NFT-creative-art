@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components'
 
+import { noHover, transition } from '@assets/styles/Common'
 import { theme } from '@assets/styles/Theme'
 
 export const CardPhoto = styled.div<PropsType>`
@@ -26,8 +27,17 @@ export const CardPhoto = styled.div<PropsType>`
       @media ${theme.media.smallMobile} {
         height: 344px;
       }
+
+      &:hover {
+        scale: 1.05;
+        ${transition()}
+      }
+
+      &:not(:hover) {
+        ${noHover()}
+      }
     `}
-  
+
   ${({ sectionValue }) =>
     sectionValue === 'best' &&
     css<PropsType>`
@@ -61,6 +71,16 @@ export const CardPhoto = styled.div<PropsType>`
           height: 190px;
         }
       }
+
+      &:hover {
+        ${transition()}
+        scale: 1.02;
+        z-index: 20;
+      }
+
+      &:not(:hover) {
+        ${noHover()}
+      }
     `}
 
   ${({ sectionValue }) =>
@@ -81,12 +101,12 @@ export const CardPhoto = styled.div<PropsType>`
   
  
     ${({ isCard }) =>
-      isCard
-        ? `
+    isCard
+      ? `
       border: 1px solid #000;
       box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     `
-        : ''}
+      : ''}
 
     // background
   ${({ viewValue }) =>
@@ -110,8 +130,24 @@ export const CardPhoto = styled.div<PropsType>`
       left: ${({ positionOptions }) => positionOptions?.left};
       transform: ${({ positionOptions }) => `rotate(${positionOptions?.rotateAngle}deg)`};
       z-index: ${({ positionOptions }) => positionOptions?.zIndex};
+      transition: transform 0.3s ease-in-out;
+
+      &:hover {
+        transform: ${({ positionOptions }) =>
+          positionOptions?.rotateAngle
+            ? `rotate(${positionOptions?.rotateAngle}deg) scale(1.05)`
+            : 'scale(1.05)'};
+        z-index: 20;
+      }
+
+      &:not(:hover) {
+        transform: ${({ positionOptions }) =>
+          positionOptions?.rotateAngle
+            ? `rotate(${positionOptions?.rotateAngle}deg) scale(1)`
+            : 'scale(1)'};
+        transition: transform 0.3s ease-in-out;
+      }
     `}
-  }
 `
 
 // types

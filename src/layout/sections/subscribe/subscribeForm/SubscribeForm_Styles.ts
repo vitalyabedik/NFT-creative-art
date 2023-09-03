@@ -19,6 +19,10 @@ const TextInput = styled.input.attrs({ type: 'text' })`
     outline: none;
   }
 
+  &:focus-visible {
+    border-color: ${theme.colors.accent};
+  }
+
   &::placeholder {
     color: ${theme.colors.mainFont};
   }
@@ -26,7 +30,7 @@ const TextInput = styled.input.attrs({ type: 'text' })`
 
 const ButtonContainer = styled.div`
   position: absolute;
-  top: 5px;
+  top: 6px;
   right: 4px;
 
   @media ${'screen and (max-width: 576px)'} {

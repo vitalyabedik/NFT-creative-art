@@ -5,7 +5,7 @@ export const useWindowScroll = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      window.scrollY > 70 ? setChangeBackground(true) : setChangeBackground(false)
+      window.scrollY > 1 ? setChangeBackground(true) : setChangeBackground(false)
     }
 
     window.addEventListener('scroll', handleScroll)
