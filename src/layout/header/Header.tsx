@@ -19,9 +19,9 @@ export const Header: React.FC = () => {
   const changeBackground = useWindowScroll()
 
   return (
-    <Fade delay={400} triggerOnce={true}>
-      <S.Header isScrolled={changeBackground}>
-        <Container>
+    <S.Header isScrolled={changeBackground}>
+      <Container>
+        <Fade delay={400} triggerOnce={true}>
           <FlexContainer justify="space-between" align="center">
             <Logo />
             {isMobile ? <MobileMenu items={headerItems} /> : <DesktopMenu items={headerItems} />}
@@ -29,9 +29,9 @@ export const Header: React.FC = () => {
               <Button bntType="primary">Contact</Button>
             </S.ButtonContainer>
           </FlexContainer>
-        </Container>
-      </S.Header>
-    </Fade>
+        </Fade>
+      </Container>
+    </S.Header>
   )
 }
 
