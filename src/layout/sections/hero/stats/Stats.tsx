@@ -11,9 +11,19 @@ type PropsType = {
 
 export const Stats: React.FC<PropsType> = ({ hero }) => {
   const isMobile = useWindowWidth(576)
+  const isUltaSmallMobile = useWindowWidth(374)
+  let gap
+
+  if (isUltaSmallMobile) {
+    gap = '45px'
+  } else if (isMobile) {
+    gap = '56px'
+  } else {
+    gap = '94px'
+  }
 
   return (
-    <FlexContainer gap={isMobile ? '56.5px' : '94px'}>
+    <FlexContainer gap={gap}>
       {hero.stats.map(stat => {
         return <StatItem key={stat.id} statistics={stat.value} description={stat.type} />
       })}

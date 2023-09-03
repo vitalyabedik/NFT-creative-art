@@ -22,6 +22,7 @@ export const theme = {
     tablet: 'screen and (max-width: 768px)',
     mobile: 'screen and (max-width: 576px)',
     smallMobile: 'screen and (max-width: 376px)',
+    ultraSmallMobile: 'screen and (max-width: 375px)',
     extra: {
       hideHeader: 'screen and (max-width: 820px)',
       heroBigDesktop: 'screen and (max-width: 1310px)',

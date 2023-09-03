@@ -18,6 +18,10 @@ const StatItemContainer = styled.div`
     right: -24px;
     top: 0;
     z-index: 10;
+
+    @media ${theme.media.ultraSmallMobile} {
+      right: -15px;
+    }
   }
 `
 
