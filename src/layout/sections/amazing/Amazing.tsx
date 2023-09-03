@@ -10,7 +10,7 @@ export const Amazing: React.FC = () => {
   const isTablet = useWindowWidth(768)
 
   return (
-    <Fade cascade={true} damping={1} delay={400}>
+    <Fade cascade={true} damping={1} delay={400} triggerOnce={true}>
       <StyledAmazing id={'amazing'}>
         <Container>
           <FlexContainer direction="column" gap={isTablet ? '32px' : '64px'}>
