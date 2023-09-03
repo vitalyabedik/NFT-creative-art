@@ -1,3 +1,5 @@
+import { Fade } from 'react-awesome-reveal'
+
 import { S } from './Header_Styles'
 
 import { Button, Container, FlexContainer, Logo } from '@/components'
@@ -17,17 +19,19 @@ export const Header: React.FC = () => {
   const changeBackground = useWindowScroll()
 
   return (
-    <S.Header isScrolled={changeBackground}>
-      <Container>
-        <FlexContainer justify="space-between" align="center">
-          <Logo />
-          {isMobile ? <MobileMenu items={headerItems} /> : <DesktopMenu items={headerItems} />}
-          <S.ButtonContainer>
-            <Button bntType="primary">Contact</Button>
-          </S.ButtonContainer>
-        </FlexContainer>
-      </Container>
-    </S.Header>
+    <Fade delay={400} triggerOnce={true}>
+      <S.Header isScrolled={changeBackground}>
+        <Container>
+          <FlexContainer justify="space-between" align="center">
+            <Logo />
+            {isMobile ? <MobileMenu items={headerItems} /> : <DesktopMenu items={headerItems} />}
+            <S.ButtonContainer>
+              <Button bntType="primary">Contact</Button>
+            </S.ButtonContainer>
+          </FlexContainer>
+        </Container>
+      </S.Header>
+    </Fade>
   )
 }
 
