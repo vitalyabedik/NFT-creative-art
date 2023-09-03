@@ -17,7 +17,7 @@ const StatItemContainer = styled.div`
     position: absolute;
     right: -24px;
     top: 0;
-    z-index: 99999;
+    z-index: 10;
   }
 `
 

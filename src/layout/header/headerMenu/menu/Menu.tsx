@@ -4,15 +4,22 @@ import { HeaderItemType } from '@layout/header'
 
 type PropsType = {
   items: HeaderItemType[]
+  closeMenu?: () => void
 }
 
-export const Menu: React.FC<PropsType> = ({ items }) => {
+export const Menu: React.FC<PropsType> = ({ items, closeMenu }) => {
   return (
     <ul>
       {items.map(item => {
         return (
           <S.MenuItem key={item.title}>
-            <S.NavLink activeClass="active" to={item.href} smooth={true} spy={true}>
+            <S.NavLink
+              onClick={closeMenu}
+              activeClass="active"
+              to={item.href}
+              smooth={true}
+              spy={true}
+            >
               {item.title}
             </S.NavLink>
           </S.MenuItem>

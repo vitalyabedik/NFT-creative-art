@@ -4,6 +4,14 @@ import styled, { css } from 'styled-components'
 import { font } from '@assets/styles/Common'
 import { theme } from '@assets/styles/Theme'
 
+const MenuItems = styled.ul`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+`
+
 const MenuItem = styled.li`
   position: relative;
 `
@@ -14,15 +22,19 @@ export const NavLink = styled(Link)`
   &.active {
     color: ${theme.colors.circleFont};
 
+    position: relative;
+
     &::before {
       content: '';
-      display: inline-block;
+      display: block;
       height: 1px;
       width: 100%;
       background-color: ${theme.colors.accent};
 
       position: absolute;
-      bottom: 0;
+      bottom: -5px;
+      left: 50%;
+      transform: translateX(-50%);
     }
   }
 `
@@ -35,8 +47,7 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
   top: 0;
   left: 0;
   bottom: 0;
-  
-  background-color: rgba(31, 31, 32, 0.9);
+  background-color: rgb(0 0 0 /74%);
   display: none;
   z-index: 999999999;
   ${font({ Fmin: 24, Fmax: 24 })}
@@ -55,8 +66,8 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
       display: flex;
       justify-content: center;
       align-items: center;
-
       width: 100%;
+      ${font({ lineHeight: 3, Fmin: 24, Fmax: 24 })}
     `}
 }
 `
@@ -132,6 +143,7 @@ const StyledDesktopMenu = styled.nav`
 
 export const S = {
   NavLink,
+  MenuItems,
   MenuItem,
   StyledMobileMenu,
   MobileMenuPopup,

@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import * as React from 'react'
 
 import { S } from '../HeaderMenu_Styles'
 
@@ -23,7 +22,7 @@ export const MobileMenu: React.FC<PropsType> = ({ items }) => {
         <span></span>
       </S.BurgerButton>
       <S.MobileMenuPopup isOpen={menuIsOpen} onClick={onClickPopUpHandler}>
-        <Menu items={items} />
+        <Menu items={items} closeMenu={onClickPopUpHandler} />
       </S.MobileMenuPopup>
     </S.StyledMobileMenu>
   )
