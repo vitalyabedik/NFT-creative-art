@@ -27,15 +27,6 @@ export const CardPhoto = styled.div<PropsType>`
       @media ${theme.media.smallMobile} {
         height: 344px;
       }
-
-      &:hover {
-        scale: 1.05;
-        ${transition()}
-      }
-
-      &:not(:hover) {
-        ${noHover()}
-      }
     `}
 
   ${({ sectionValue }) =>

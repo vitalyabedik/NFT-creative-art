@@ -20,6 +20,10 @@ const StyledPromotion = styled.div`
     height: 137px;
     padding: 12px;
   }
+
+  @media ${theme.media.ultraSmallMobile} {
+    right: 20px;
+  }
 `
 
 const PromotionInfo = styled.div`

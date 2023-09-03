@@ -27,6 +27,10 @@ export const SectionContent: React.FC<PropsType> = ({
 
 const StyledSectionContent = styled.div`
   text-align: left;
+
+  @media ${theme.media.ultraSmallMobile} {
+    padding: 0 15px;
+  }
 `
 
 const Title = styled.div<{ centeredItems: boolean }>`
