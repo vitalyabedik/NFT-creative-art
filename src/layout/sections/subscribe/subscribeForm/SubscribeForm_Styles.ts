@@ -11,7 +11,7 @@ const TextInput = styled.input.attrs({ type: 'text' })`
   width: 100%;
   height: 60px;
   padding: 0 24px;
-
+  color: ${theme.colors.mainFont};
   background-color: ${theme.colors.secondaryBg};
   border-radius: ${theme.borderRadius.button};
 
