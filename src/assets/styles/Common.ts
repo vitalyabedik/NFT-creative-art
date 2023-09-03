@@ -19,5 +19,5 @@ export const font = ({ family, weight, color, lineHeight, Fmax, Fmin }: FontProp
 `
 
 export const transition = () => `
-    transition: all 0.3s ease-out;
+    transition: .2s ease-in-out;
 `

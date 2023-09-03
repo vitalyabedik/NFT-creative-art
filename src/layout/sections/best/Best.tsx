@@ -9,7 +9,7 @@ export const Best: React.FC = () => {
   const isDesktop = useWindowWidth(1240)
 
   return (
-    <StyledBest>
+    <StyledBest id={'best'}>
       <Container>
         <FlexContainer
           direction={isDesktop ? 'column' : 'row'}

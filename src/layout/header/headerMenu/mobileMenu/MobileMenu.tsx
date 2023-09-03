@@ -3,10 +3,11 @@ import * as React from 'react'
 
 import { S } from '../HeaderMenu_Styles'
 
+import { HeaderItemType } from '@layout/header'
 import { Menu } from '@layout/header/headerMenu/menu'
 
 type PropsType = {
-  items: string[]
+  items: HeaderItemType[]
 }
 
 export const MobileMenu: React.FC<PropsType> = ({ items }) => {

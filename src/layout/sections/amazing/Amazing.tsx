@@ -9,7 +9,7 @@ export const Amazing: React.FC = () => {
   const isTablet = useWindowWidth(768)
 
   return (
-    <StyledAmazing>
+    <StyledAmazing id={'amazing'}>
       <Container>
         <FlexContainer direction="column" gap={isTablet ? '32px' : '64px'}>
           <SectionHeader

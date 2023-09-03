@@ -8,7 +8,7 @@ import { Stats } from '@layout/sections/hero/stats'
 
 export const Hero: React.FC = () => {
   return (
-    <S.StyledHero>
+    <S.StyledHero id={'home'}>
       <Container>
         <S.GridContainer>
           <S.GridItem>

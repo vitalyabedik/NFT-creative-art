@@ -11,7 +11,7 @@ export const Popular: React.FC = () => {
   const isTablet = useWindowWidth(768)
 
   return (
-    <StyledPopular>
+    <StyledPopular id={'popular'}>
       <Container>
         <FlexContainer direction="column" gap={isTablet ? '32px' : '64px'}>
           <SectionHeader

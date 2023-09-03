@@ -1,3 +1,4 @@
+import { Link } from 'react-scroll'
 import styled, { css } from 'styled-components'
 
 import { font } from '@assets/styles/Common'
@@ -8,8 +9,9 @@ const MenuItem = styled.li`
 `
 
 // Menu
-const Link = styled.a`
-  &:hover {
+export const NavLink = styled(Link)`
+  &:hover,
+  &.active {
     color: ${theme.colors.circleFont};
 
     &::before {
@@ -129,7 +131,7 @@ const StyledDesktopMenu = styled.nav`
 `
 
 export const S = {
-  Link,
+  NavLink,
   MenuItem,
   StyledMobileMenu,
   MobileMenuPopup,

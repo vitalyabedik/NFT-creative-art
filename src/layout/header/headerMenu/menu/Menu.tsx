@@ -1,7 +1,9 @@
 import { S } from '../HeaderMenu_Styles'
 
+import { HeaderItemType } from '@layout/header'
+
 type PropsType = {
-  items: string[]
+  items: HeaderItemType[]
 }
 
 export const Menu: React.FC<PropsType> = ({ items }) => {
@@ -9,8 +11,10 @@ export const Menu: React.FC<PropsType> = ({ items }) => {
     <ul>
       {items.map(item => {
         return (
-          <S.MenuItem key={item}>
-            <S.Link href="#">{item}</S.Link>
+          <S.MenuItem key={item.title}>
+            <S.NavLink activeClass="active" to={item.href} smooth={true} spy={true}>
+              {item.title}
+            </S.NavLink>
           </S.MenuItem>
         )
       })}

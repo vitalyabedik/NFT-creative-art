@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components'
 
+import { transition } from '@assets/styles/Common'
 import { theme } from '@assets/styles/Theme'
 
 type PropsType = {
@@ -8,6 +9,7 @@ type PropsType = {
 
 const Header = styled.header<PropsType>`
   padding: 18px 16px;
+  ${transition()}
 
   ${({ isScrolled }) =>
     isScrolled &&

@@ -5,7 +5,12 @@ import { useWindowScroll, useWindowWidth } from '@/hooks'
 import { DesktopMenu } from '@layout/header/headerMenu'
 import { MobileMenu } from '@layout/header/headerMenu/mobileMenu'
 
-const headerItems = ['Marketplace', 'Artists', 'Community', 'Collections']
+const headerItems: HeaderItemType[] = [
+  { title: 'Marketplace', href: 'home' },
+  { title: 'Artists', href: 'amazing' },
+  { title: 'Community', href: 'best' },
+  { title: 'Collections', href: 'popular' },
+]
 
 export const Header: React.FC = () => {
   const isMobile = useWindowWidth(820)
@@ -24,4 +29,10 @@ export const Header: React.FC = () => {
       </Container>
     </S.Header>
   )
+}
+
+// types
+export type HeaderItemType = {
+  title: string
+  href: string
 }

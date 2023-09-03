@@ -1,9 +1,10 @@
 import { S } from '../HeaderMenu_Styles'
 
+import { HeaderItemType } from '@layout/header'
 import { Menu } from '@layout/header/headerMenu'
 
 type PropsType = {
-  items: string[]
+  items: HeaderItemType[]
 }
 
 export const DesktopMenu: React.FC<PropsType> = ({ items }) => {
