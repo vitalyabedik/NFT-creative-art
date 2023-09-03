@@ -21,15 +21,17 @@ export const Header: React.FC = () => {
   return (
     <S.Header isScrolled={changeBackground}>
       <Container>
-        <Fade delay={400} triggerOnce={true}>
-          <FlexContainer justify="space-between" align="center">
+        <FlexContainer justify="space-between" align="center">
+          <Fade delay={400} triggerOnce={true}>
             <Logo />
-            {isMobile ? <MobileMenu items={headerItems} /> : <DesktopMenu items={headerItems} />}
+          </Fade>
+          {isMobile ? <MobileMenu items={headerItems} /> : <DesktopMenu items={headerItems} />}
+          <Fade delay={400} triggerOnce={true}>
             <S.ButtonContainer>
               <Button bntType="primary">Contact</Button>
             </S.ButtonContainer>
-          </FlexContainer>
-        </Fade>
+          </Fade>
+        </FlexContainer>
       </Container>
     </S.Header>
   )

@@ -1,3 +1,5 @@
+import { Fade } from 'react-awesome-reveal'
+
 import { S } from '../HeaderMenu_Styles'
 
 import { HeaderItemType } from '@layout/header'
@@ -9,8 +11,10 @@ type PropsType = {
 
 export const DesktopMenu: React.FC<PropsType> = ({ items }) => {
   return (
-    <S.StyledDesktopMenu>
-      <Menu items={items} />
-    </S.StyledDesktopMenu>
+    <Fade delay={400} triggerOnce={true}>
+      <S.StyledDesktopMenu>
+        <Menu items={items} />
+      </S.StyledDesktopMenu>
+    </Fade>
   )
 }

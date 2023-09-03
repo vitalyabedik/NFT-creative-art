@@ -1,5 +1,7 @@
 import { useState } from 'react'
 
+import { Fade } from 'react-awesome-reveal'
+
 import { S } from '../HeaderMenu_Styles'
 
 import { HeaderItemType } from '@layout/header'
@@ -22,7 +24,9 @@ export const MobileMenu: React.FC<PropsType> = ({ items }) => {
         <span></span>
       </S.BurgerButton>
       <S.MobileMenuPopup isOpen={menuIsOpen} onClick={onClickPopUpHandler}>
-        <Menu items={items} closeMenu={onClickPopUpHandler} />
+        <Fade direction={'down'} delay={200}>
+          <Menu items={items} closeMenu={onClickPopUpHandler} />
+        </Fade>
       </S.MobileMenuPopup>
     </S.StyledMobileMenu>
   )

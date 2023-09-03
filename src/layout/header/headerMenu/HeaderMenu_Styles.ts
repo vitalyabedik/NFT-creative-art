@@ -67,6 +67,7 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
       justify-content: center;
       align-items: center;
       width: 100%;
+      background-color: rgb(0 0 0 /74%);
       ${font({ lineHeight: 3, Fmin: 24, Fmax: 24 })}
     `}
 }
@@ -79,7 +80,7 @@ export const BurgerButton = styled.button<{ isOpen: boolean }>`
   right: 60px;
   width: 24px;
   height: 24px;
-  z-index: 999999999;
+  z-index: 9999999999;
 
   span {
     display: block;
